@@ -88,10 +88,10 @@ start_time = time.time()
 
 while True:
 
-    whole_buf=[]
+    whole_buf = []
     data=''
     while True:
-        count+=1
+        count += 1
         buf, addr = sock.recvfrom(50000)
 
         #print(buf)
