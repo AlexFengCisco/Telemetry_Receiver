@@ -80,6 +80,25 @@
     Timestamp from Start =29.962813138961792
     =================================================================
 
+### Generate Telemetry GPB compact proto files
+
+    RP/0/RP0/CPU0:XTC#telemetry generate gpb-encoding path RootOper.QOS.Node.PolicyMap.Interface.Input.Statistics file disk0:/qos.proto
+    Tue Jan 22 06:54:59.603 UTC
+    Created /disk0:/qos.proto
+    
+    * NOTE 
+    For Telemetry generate protofile , path should be a yang to xml schema path,
+    How to find yang to xml schema path?
+    
+    RP/0/RP0/CPU0:XTC#run
+    Tue Jan 22 06:58:56.512 UTC
+    [xr-vm_node0_RP0_CPU0:~]$cd /pkg/telemetry/mdt/protogen
+    [xr-vm_node0_RP0_CPU0:/pkg/telemetry/mdt/protogen]$ls
+    yang_to_schema.txt
+    [xr-vm_node0_RP0_CPU0:/pkg/telemetry/mdt/protogen]$
+    
+    yang_to_Schema.txt has all yang path to xml schema path maps.
+
 
 ### Will consolidate Json and GPB in one py file soon
 
