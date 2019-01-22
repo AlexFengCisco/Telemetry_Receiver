@@ -45,7 +45,7 @@ while True:
                     if field.uint64_value:
                         print(field.name+':'+str(field.uint64_value))
 
-    #Handle Telemetry UDP GPB kv from IOX
+    #Handle Telemetry UDP GPB  from IOX
     if buf[0:1] == b'\x00': ##check the binary daa , no official document
         print("Telemetry GPB  message from IOX")
         Telemetry_content.ParseFromString(buf[12:])
@@ -54,7 +54,7 @@ while True:
         print('Encodig Path :' + Telemetry_content.encoding_path)
 
 
-        if len(str(Telemetry_content.data_gpbkv)) > 2: # in case of unstable A9KV , sometimes sent empty content message
+        if len(str(Telemetry_content.data_gpbkv)) > 2: # Handle GPB kv , in case of unstable A9KV , sometimes sent empty content message
             print('GPB kv format')
             Fields_list = Telemetry_content.data_gpbkv[0].fields[1].fields
             #print(Fields_list)
@@ -66,11 +66,11 @@ while True:
                 if field.uint32_value:
                     print(field.name + ':' + str(field.uint32_value))
 
-        if len(str(Telemetry_content.data_gpb))> 0:
+        if len(str(Telemetry_content.data_gpb))> 0: # Handle GPB compact
             print('GPB compact format')
             row_content_buf = (Telemetry_content.data_gpb.row[0].content)
 
-            Telemetry_row_content = uptime_pb2.system_uptime()
+            Telemetry_row_content = uptime_pb2.system_uptime() #Decode content , may base on encoding path to choose content ptoto file
 
             Telemetry_row_content.ParseFromString(row_content_buf)
             print('Content decoded here :')
