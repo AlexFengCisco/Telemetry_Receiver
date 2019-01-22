@@ -62,20 +62,22 @@
     ('10.75.58.60', 33208)
     This is a System Uptime telemetry messgae
     Node =XTC
-    Collection ID =236
+    Encoding Path =Cisco-IOS-XR-shellutil-oper:system-time/uptime
+    Collection ID =5233
     Host Name =XTC
-    Uptime =3125
-    Recevice Count =4
-    Timestamp from Start =42.76471996307373
+    Uptime =58169
+    Recevice Count =1
+    Timestamp from Start =7.964596271514893
     =================================================================
     ('10.75.58.60', 33208)
     This is a System Uptime telemetry messgae
     Node =XTC
-    Collection ID =237
+    Encoding Path =Cisco-IOS-XR-shellutil-oper:system-time/uptime
+    Collection ID =5235
     Host Name =XTC
-    Uptime =3136
-    Recevice Count =5
-    Timestamp from Start =53.48438501358032
+    Uptime =58191
+    Recevice Count =2
+    Timestamp from Start =29.962813138961792
     =================================================================
 
 
