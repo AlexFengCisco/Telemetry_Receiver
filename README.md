@@ -6,8 +6,8 @@
     This Python sample demo how to collect Telemetry mesasge via UDP and how to Parse message.
     
     Demo enviroment has N9K and XRv9K 
-     N9K x.x.x.x     version : nx-os 9.2.2
-     xrv9k x.x.x.x    version : xrv9k 6.4.1
+     N9K x.x.x.x     version : nx-os 9.2.2    JSON GPB-kv
+     xrv9k x.x.x.x    version : xrv9k 6.4.1   JSON GPB GPB-kv
      
     Telemetry Receiver UDP : port 57500
      
