@@ -45,7 +45,7 @@ while True:
                     if field.uint64_value:
                         print(field.name+':'+str(field.uint64_value))
 
-    #Handle Telemetry UDP GPB  from IOX
+    #Handle Telemetry UDP GPB and GPB-kv  from IOX
     if buf[0:1] == b'\x00': ##check the binary daa , no official document
         print("Telemetry GPB  message from IOX")
         Telemetry_content.ParseFromString(buf[12:])
