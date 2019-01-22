@@ -80,7 +80,7 @@
     Timestamp from Start =29.962813138961792
     =================================================================
 
-### Generate Telemetry GPB compact proto files
+### IOS-XR Generate Telemetry GPB compact proto files
 
     RP/0/RP0/CPU0:XTC#telemetry generate gpb-encoding path RootOper.QOS.Node.PolicyMap.Interface.Input.Statistics file disk0:/qos.proto
     Tue Jan 22 06:54:59.603 UTC
