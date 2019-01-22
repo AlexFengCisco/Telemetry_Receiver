@@ -70,7 +70,7 @@ while True:
             print('GPB compact format')
             row_content_buf = (Telemetry_content.data_gpb.row[0].content)
 
-            Telemetry_row_content = uptime_pb2.system_uptime() #Decode content , may base on encoding path to choose content ptoto file
+            Telemetry_row_content = uptime_pb2.system_uptime() #Decode content , may base on encoding path to choose content proto file
 
             Telemetry_row_content.ParseFromString(row_content_buf)
             print('Content decoded here :')
