@@ -136,7 +136,7 @@ while True:
                 Telemetry_row_content.ParseFromString(row_content_buf)
                 print('Content decoded here :')
 
-                json_dict = proto_to_dict(Telemetry_row_content)
+                json_dict = proto_to_dict(Telemetry_row_content) #convert to  json format
                 print(json_dict)
 
             if Telemetry_content.encoding_path == 'Cisco-IOS-XR-shellutil-oper:system-time/uptime':
@@ -146,7 +146,7 @@ while True:
                 Telemetry_row_content.ParseFromString(row_content_buf)
                 print('Content decoded here :')
 
-                json_dict = proto_to_dict(Telemetry_row_content)
+                json_dict = proto_to_dict(Telemetry_row_content) #convert to  json format
                 print(json_dict)
 
                 print('Host Name :' + Telemetry_row_content.hostname)
