@@ -1,9 +1,61 @@
 
 import socket, struct
 import json
+from google.protobuf.descriptor import FieldDescriptor
 import time
 import telemetry_pb2
 import uptime_pb2 # Telemetry compact GPB special for uptime
+import qos_pb2
+
+DECODE_FN_MAP = {
+    FieldDescriptor.TYPE_DOUBLE: float,
+    FieldDescriptor.TYPE_FLOAT: float,
+    FieldDescriptor.TYPE_INT32: int,
+    FieldDescriptor.TYPE_INT64: int, #long
+    FieldDescriptor.TYPE_UINT32: int,
+    FieldDescriptor.TYPE_UINT64: int,#long
+    FieldDescriptor.TYPE_SINT32: int,
+    FieldDescriptor.TYPE_SINT64: int,#long
+    FieldDescriptor.TYPE_FIXED32: int,
+    FieldDescriptor.TYPE_FIXED64: int,#long
+    FieldDescriptor.TYPE_SFIXED32: int,
+    FieldDescriptor.TYPE_SFIXED64: int,#long
+    FieldDescriptor.TYPE_BOOL: bool,
+    FieldDescriptor.TYPE_STRING: str,
+    FieldDescriptor.TYPE_BYTES: lambda b: bytes_to_string(b),
+    FieldDescriptor.TYPE_ENUM: int,
+}
+
+def field_type_to_fn(msg, field):
+    if field.type == FieldDescriptor.TYPE_MESSAGE:
+        # For embedded messages recursively call this function. If it is
+        # a repeated field return a list
+        result = lambda msg: proto_to_dict(msg)
+    elif field.type in DECODE_FN_MAP:
+        result = DECODE_FN_MAP[field.type]
+    else:
+        raise TypeError("Field %s.%s has unrecognised type id %d" % (
+                         msg.__class__.__name__, field.name, field.type))
+    return result
+
+
+def proto_to_dict(msg):
+    result_dict = {}
+    extensions = {}
+    for field, value in msg.ListFields():
+        conversion_fn = field_type_to_fn(msg, field)
+
+        # Skip extensions
+        if not field.is_extension:
+            # Repeated fields result in an array, otherwise just call the
+            # conversion function to store the value
+            if field.label == FieldDescriptor.LABEL_REPEATED:
+                result_dict[field.name] = [conversion_fn(v) for v in value]
+            else:
+                result_dict[field.name] = conversion_fn(value)
+    return result_dict
+
+
 
 
 # Bind Socket UDP port 57500 as Telemetry recevice server
@@ -58,6 +110,10 @@ while True:
             print('GPB kv format')
             Fields_list = Telemetry_content.data_gpbkv[0].fields[1].fields
             #print(Fields_list)
+
+            json_dict = proto_to_dict(Telemetry_content.data_gpbkv[0])
+            print(json_dict)
+
             for field in Fields_list:
 
                 #print(field.fields)
@@ -70,13 +126,28 @@ while True:
             print('GPB compact format')
             row_content_buf = (Telemetry_content.data_gpb.row[0].content)
 
-            Telemetry_row_content = uptime_pb2.system_uptime() #Decode content , may base on encoding path to choose content proto file
+            if Telemetry_content.encoding_path == 'Cisco-IOS-XR-qos-ma-oper:qos/nodes/node/policy-map/interface-table/interface/input/service-policy-names/service-policy-instance/statistics':
+                print('QoS ')
+                Telemetry_row_content = qos_pb2.qos_stats()
+                Telemetry_row_content.ParseFromString(row_content_buf)
+                print('Content decoded here :')
 
-            Telemetry_row_content.ParseFromString(row_content_buf)
-            print('Content decoded here :')
+                json_dict = proto_to_dict(Telemetry_row_content)
+                print(json_dict)
 
-            print('Host Name :'+Telemetry_row_content.hostname)
-            print('System Up Time :'+str(Telemetry_row_content.uptime)+' Seconds')
+            if Telemetry_content.encoding_path == 'Cisco-IOS-XR-shellutil-oper:system-time/uptime':
+                print('uptime')
+                Telemetry_row_content = uptime_pb2.system_uptime()
+
+                Telemetry_row_content.ParseFromString(row_content_buf)
+                print('Content decoded here :')
+
+                json_dict = proto_to_dict(Telemetry_row_content)
+                print(json_dict)
+
+                print('Host Name :' + Telemetry_row_content.hostname)
+                print('System Up Time :' + str(Telemetry_row_content.uptime) + ' Seconds')
+
 
     print("="*200)
 
