@@ -4,8 +4,8 @@ import json
 from google.protobuf.descriptor import FieldDescriptor
 import time
 import telemetry_pb2
-import uptime_pb2 # Telemetry compact GPB special for uptime
-import qos_pb2
+import uptime_pb2 # Telemetry compact GPB proto for uptime
+import qos_pb2 # Telemetry compact GPB proto for QoS policy-map interface statistics
 
 DECODE_FN_MAP = {
     FieldDescriptor.TYPE_DOUBLE: float,
