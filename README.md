@@ -11,7 +11,7 @@
      
     Telemetry Receiver UDP : port 57500
     
-    NOTE: max protobuf length = 675535 ,header=28 ,real content = 65507 bytes
+    NOTE: max UDP protobuf length = 675535 ,header=28 ,real content = 65507 bytes
      
 ### Telemetry proto file for both GPB and GPB-kv
 
