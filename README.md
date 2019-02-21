@@ -12,6 +12,8 @@
     Telemetry Receiver UDP : port 57500
     
     NOTE: max UDP protobuf length = 675535 ,header=28 ,real content = 65507 bytes
+    
+    Inside internal MDT header, IOS-XR has 12 bytes header, NX-OS has 6 bytes 
      
 ### Telemetry proto file for both GPB and GPB-kv
 
