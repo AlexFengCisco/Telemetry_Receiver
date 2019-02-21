@@ -125,7 +125,7 @@ while True:
         if len(str(Telemetry_content.data_gpb))> 0: # Handle GPB compact GPB-kv
             '''
                GPB compact / GPB-kv needs proto files for each message decode, compile proto file to _pb2.py and import them.
-               Choose parse decode proto according to message encoding path .
+               Choose parse decode proto according to message encoding path .....
             '''
             print('GPB compact format')
             row_content_buf = (Telemetry_content.data_gpb.row[0].content)
