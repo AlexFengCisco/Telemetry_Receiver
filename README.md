@@ -14,6 +14,26 @@
     NOTE: max UDP protobuf length = 675535 ,header=28 ,real content = 65507 bytes
     
     Inside internal MDT header, IOS-XR has 12 bytes header, NX-OS has 6 bytes 
+    
+    
+     IOS-XR inside interanl header:
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |          MSG TYPE             |           ENCODING_TYPE       |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |         MSG_VERSION           |           FLAGS               |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |                           MSG_LENGTH                          |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     ~                                                               ~
+     ~                      PAYLOAD (MSG_LENGTH bytes)               ~
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     
+     MSG TYPE (2 bytes)  = 1 (for MDT)
+     ENCODING_TYPE (2 bytes) = 1 (GPB), 2 (JSON)
+     MSG_VERSION (2 bytes) = 1
+     FLAGS (2 bytes) = 0
+     MSG_LENGTH (4 bytes)
+
      
 ### Telemetry proto file for both GPB and GPB-kv
 
