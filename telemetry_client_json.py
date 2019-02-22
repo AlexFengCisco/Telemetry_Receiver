@@ -92,7 +92,7 @@ while True:
     data=''
     while True:
         count += 1
-        buf, addr = sock.recvfrom(50000)
+        buf, addr = sock.recvfrom(65535)
 
         #print(buf)
         text_buf = str(buf)
