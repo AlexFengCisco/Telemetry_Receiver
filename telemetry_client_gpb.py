@@ -69,7 +69,7 @@ start_time = time.time()
 
 while True:
     count += 1
-    buf, addr = sock.recvfrom(50000)
+    buf, addr = sock.recvfrom(65535)
     Telemetry_content = telemetry_pb2.Telemetry()
 
     #print(buf)
