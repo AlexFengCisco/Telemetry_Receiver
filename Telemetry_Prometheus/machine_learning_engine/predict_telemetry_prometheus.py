@@ -32,7 +32,7 @@
    cross entropy.
 
    by Alex Feng
-   alfeng@cisco.com
+
 '''
 import numpy as np
 import requests
