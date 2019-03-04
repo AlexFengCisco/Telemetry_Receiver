@@ -1,4 +1,6 @@
 '''
+   Sample code to predict telemetry data trend fromprometheus with tensorflow LSTM RNN
+
    Class predictor and function predictor_LSTM , input time series source data ,
    result  return evaluated observed and prdicted value and all times ,
 
@@ -52,42 +54,42 @@ if __name__ == '__main__':
   prometheus_api_url = "http://10.75.58.17:9090/api/v1/query"
 
   #prometheus data stream sample 01
-  prometheus_tsdb_block_load_query = '''prometheus_tsdb_blocks_loaded{job="prometheus"}[168h]'''
-  prometheus_tsdb_block_load_sample_rate = 40
-  prometheus_tsdb_block_load_compress_rate = 10
-  prometheus_tsdb_block_load_time_sample = 60
-  prometheus_tsdb_block_load_time_metric = 1000
+  prometheus_query = '''prometheus_tsdb_blocks_loaded{job="prometheus"}[168h]'''
+  prometheus_sample_rate = 40
+  prometheus_compress_rate = 10
+  prometheus_time_sample = 60
+  prometheus_time_metric = 1000
 
-  #prometheus_tsdb_block_load_query = '''ios_xr_system_uptime{instance="10.75.53.220:9997",job="alex_telemetry_exporter"}[5d]'''
-  #prometheus_tsdb_block_load_sample_rate = 1
-  #prometheus_tsdb_block_load_compress_rate = 225000
-  #prometheus_tsdb_block_load_time_sample = 15
-  #prometheus_tsdb_block_load_time_metric = 1000
+  #prometheus_query = '''ios_xr_system_uptime{instance="10.75.53.220:9997",job="alex_telemetry_exporter"}[5d]'''
+  #prometheus_sample_rate = 1
+  #prometheus_compress_rate = 225000
+  #prometheus_time_sample = 15
+  #prometheus_time_metric = 1000
 
-  #prometheus_tsdb_block_load_query = '''system_cpu_load{instance="10.75.58.20:9999",job="alex_enkins_exporter"}[7d]'''
-  #prometheus_tsdb_block_load_sample_rate = 8
-  #prometheus_tsdb_block_load_compress_rate = 1
-  #prometheus_tsdb_block_load_time_sample = 15
-  #prometheus_tsdb_block_load_time_metric = 1000
+  #prometheus_query = '''system_cpu_load{instance="10.75.58.20:9999",job="alex_enkins_exporter"}[7d]'''
+  #prometheus_sample_rate = 8
+  #prometheus_compress_rate = 1
+  #prometheus_time_sample = 15
+  #prometheus_time_metric = 1000
 
 
   #prometheus data stream sample 02
-  #prometheus_tsdb_block_load_query = '''prometheus_tsdb_head_chunks{job="prometheus"}[24h]'''
-  #prometheus_tsdb_block_load_sample_rate = 5
-  #prometheus_tsdb_block_load_compress_rate = 10000
-  #prometheus_tsdb_block_load_time_sample = 60
-  #prometheus_tsdb_block_load_time_metric = 1000
+  #prometheus_query = '''prometheus_tsdb_head_chunks{job="prometheus"}[24h]'''
+  #prometheus_sample_rate = 5
+  #prometheus_compress_rate = 10000
+  #prometheus_time_sample = 60
+  #prometheus_time_metric = 1000
 
 
   #call data source get data from prometheus
 
   ds = MLE.data_source()
   data = ds.data_source_prometheus(url = prometheus_api_url,
-                                   promql = prometheus_tsdb_block_load_query,
-                                   sample_rate = prometheus_tsdb_block_load_sample_rate,
-                                   compress_rate = prometheus_tsdb_block_load_compress_rate,
-                                   time_sample = prometheus_tsdb_block_load_time_sample,
-                                   time_metric = prometheus_tsdb_block_load_time_metric)
+                                   promql = prometheus_query,
+                                   sample_rate = prometheus_sample_rate,
+                                   compress_rate = prometheus_compress_rate,
+                                   time_sample = prometheus_time_sample,
+                                   time_metric = prometheus_time_metric)
 
 
   #data = ds.data_source_sample_sine_02() #try sample data source
@@ -107,7 +109,8 @@ if __name__ == '__main__':
   predicted_lines = plt.plot(result["predicted_times"], result["predicted"], label="prediction", color="r")
 
   plt.legend(handles=[observed_lines[0], evaluated_lines[0], predicted_lines[0]],loc="upper left")
-
+  loss_info = 'Average loss :'+str(result["average_loss"])+'   Loss :'+str(result["loss"])
+  plt.title(loss_info)
   #plt.show()
   
   plt.savefig('predict_result.png')
