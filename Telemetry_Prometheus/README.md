@@ -1,4 +1,4 @@
-#Telemetry receiver and prometheus lab
+Telemetry receiver and prometheus lab
 
     Telemetry receiver gathering source informatin from telemetry source devices, and export to prometheus server via exporter or push gateway , 
     
@@ -8,7 +8,7 @@
     
     Prometheus REST like API provides query service via promQL.
     
- ####Test bed 
+ Test bed 
     
- ###Machine learning engie 
+ Machine learning engie 
  
