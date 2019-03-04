@@ -10,6 +10,8 @@
     
     Prometheus REST like API provides query service via promQL.
     
+ ![N|Solid](grafana.png)
+ 
  Test bed 
  
  ![N|Solid](test_bed.png)
