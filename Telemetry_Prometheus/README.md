@@ -11,6 +11,8 @@
     Prometheus REST like API provides query service via promQL.
     
  Test bed 
-    
+ 
+ ![N|Solid](test_bed.png)
+ 
  Machine learning engie 
  
