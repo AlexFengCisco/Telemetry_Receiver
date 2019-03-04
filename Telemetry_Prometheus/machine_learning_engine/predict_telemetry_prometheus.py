@@ -29,6 +29,8 @@
    try to make data value difference extremely visible. RNN deep learning and optimizer will easy to make good loss or
    cross entropy.
 
+   by Alex Feng
+   alfeng@cisco.com
 '''
 import numpy as np
 import requests

@@ -13,7 +13,12 @@ import json
 import numpy as np
 
 class LSTMModel(ts_model.SequentialTimeSeriesModel):
-    """A time series model-building example using an RNNCell."""
+    """A time series model-building example using an RNNCell.
+       This class code clone from Google github
+       tensorflow/tensorflow/contrib/timeseries/examples/lstm.py
+
+
+    """
 
     def __init__(self, num_units, num_features, dtype=tf.float32):
         """Initialize/configure the model object.
