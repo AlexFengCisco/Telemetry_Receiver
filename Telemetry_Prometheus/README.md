@@ -1,4 +1,4 @@
-#Telemetry receiver and prometheus lab
+##Telemetry receiver and prometheus lab
 
     Telemetry receiver gathering source informatin from telemetry source devices, 
     and export to prometheus server via exporter or push gateway.
@@ -12,9 +12,10 @@
     
  ![N|Solid](grafana.png)
  
- Test bed 
+ ##Test bed 
  
  ![N|Solid](test_bed.png)
  
- Machine learning engie 
- 
+ ##Machine learning engie 
+     Test code with Tensorflow LSTM ,trained time series data pulled from prometheus server , 
+     and output predicted data with plot graph.
