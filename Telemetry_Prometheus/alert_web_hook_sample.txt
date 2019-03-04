@@ -1,0 +1,39 @@
+{
+ u'status': u'resolved',
+ u'groupLabels': {
+ 					u'alertname': u'alex_test_Alert'
+ 				},
+ u'groupKey': u'{}:{alertname="alex_test_Alert"}',
+ u'commonAnnotations': {
+         				u'description': u'10.75.53.220:9091 test some metric value over 4.00 (current value: 13.14)',
+         				u'summary': u'Instance 10.75.53.220:9091 metric value over 4.00'
+         				},
+ u'alerts': [
+ 				{
+ 				u'status': u'resolved',
+ 				u'labels': {
+ 							u'instance': u'10.75.53.220:9091',
+ 							u'job': u'alex_push_gateway',
+ 							u'exported_job': u'some_job',
+ 							u'alertname': u'alex_test_Alert',
+ 							u'severity': u'page'
+ 							},
+ 				u'endsAt': u'2019-02-26T16:21:34.94191525+08:00',
+ 				u'generatorURL': u'http://vm05:9090/graph?g0.expr=some_metric%7Bexported_job%3D%22some_job%22%2Cinstance%3D%2210.75.53.220%3A9091%22%2Cjob%3D%22alex_push_gateway%22%7D+%3E+4&g0.tab=1', u'startsAt': u'2019-02-26T16:21:19.94196263+08:00',
+ 				u'annotations': {
+ 								u'description': u'10.75.53.220:9091 test some metric value over 4.00 (current value: 13.14)',
+ 								u'summary': u'Instance 10.75.53.220:9091 metric value over 4.00'
+ 								}
+ 				}
+ 			],
+ u'version': u'4',
+ u'receiver': u'web\\.hook',
+ u'externalURL': u'http://vm05:9093',
+ u'commonLabels': {
+ 					u'instance': u'10.75.53.220:9091',
+ 					u'job': u'alex_push_gateway',
+ 					u'exported_job': u'some_job',
+ 					u'alertname': u'alex_test_Alert',
+ 					u'severity': u'page'
+ 				}
+}
