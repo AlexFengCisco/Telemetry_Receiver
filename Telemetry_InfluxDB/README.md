@@ -1,4 +1,4 @@
-#Telemetry Influxdb lab
+Telemetry Influxdb lab
 
     Telemetry recevier got data and stored in tmp file.
     
