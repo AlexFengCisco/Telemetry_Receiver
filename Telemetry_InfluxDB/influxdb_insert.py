@@ -32,8 +32,8 @@ while True:
         {
             "measurement": "test_metric",
             "tags": {
-                "tag01": "tag01.1",
-                "tag02": "tag02.2"
+                "tag01": uptime_json['data_json'][0]['content']['hostname'],
+                "tag02": "uptime"
             },
 
             "fields": {
