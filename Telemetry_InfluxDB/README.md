@@ -1,9 +1,9 @@
 #Telemetry Influxdb lab
 
-    Telemetry recevier got data and store in tmp file.
+    Telemetry recevier got data and stored in tmp file.
     
-    influxdb insert read the tmp file data in 10 seconds interval and insert into influxdb
+    influxdb insertion code read the tmp file data by 10 seconds interval and insert into influxdb
     
-    Grafana data resource from influxdb.
+    Grafana data setup data source from influxdb.
     
 ![N|Solid](influxdb_lab.png)
