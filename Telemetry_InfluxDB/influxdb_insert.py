@@ -46,12 +46,3 @@ while True:
     time.sleep(SEND_INTERVAL)
 
 
-
-#result = client.query('select * from test_metric')
-
-#value_list = list(result)[0]
-
-#for v in value_list:
-    #print(v['time'])
-    #print(v['value'])
-    #print(v)
