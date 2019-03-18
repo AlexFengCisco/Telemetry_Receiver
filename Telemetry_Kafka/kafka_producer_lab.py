@@ -10,7 +10,14 @@ import time
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
-producer = KafkaProducer(bootstrap_servers='10.75.58.26:9092', value_serializer=lambda m: json.dumps(m).encode('utf-8'))
+
+KAFKA_SERVER = '10.75.58.26'
+KAFKA_PORT = ':9092'
+
+TOPIC = 'telemetry'
+
+
+producer = KafkaProducer(bootstrap_servers=[KAFKA_SERVER+KAFKA_PORT], value_serializer=lambda m: json.dumps(m).encode('utf-8'))
 
 pre_uptime = ''
 while True:
@@ -32,7 +39,7 @@ while True:
         # message value and key are raw bytes -- decode if necessary!
         # e.g., for unicode: `message.value.decode('utf-8')` ,for value_deserializer json configed , direct ouput json
 
-        future = producer.send('telemetry', kafka_payload)
+        future = producer.send(TOPIC, kafka_payload)
 
         try:
             record_metadata = future.get(timeout=10)
