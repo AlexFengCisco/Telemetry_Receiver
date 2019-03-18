@@ -1,0 +1,1 @@
+{"node_id_str": "XTC", "subscription_id_str": "test_sub", "encoding_path": "Cisco-IOS-XR-shellutil-oper:system-time/uptime", "collection_id": 37639, "collection_start_time": 1550827924962, "msg_timestamp": 1550827924977, "data_json": [{"timestamp": 1550827924974, "keys": {}, "content": {"hostname": "XTC", "uptime": 350803}}], "collection_end_time": 1550827924977}
