@@ -32,7 +32,7 @@ while True:
         # message value and key are raw bytes -- decode if necessary!
         # e.g., for unicode: `message.value.decode('utf-8')` ,for value_deserializer json configed , direct ouput json
 
-        future = producer.send('test', kafka_payload)
+        future = producer.send('telemetry', kafka_payload)
 
         try:
             record_metadata = future.get(timeout=10)

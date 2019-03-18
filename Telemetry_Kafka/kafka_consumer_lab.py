@@ -9,7 +9,7 @@ from kafka import KafkaConsumer
 KAFKA_SERVER = '10.75.58.26'
 KAFKA_PORT = ':9092'
 
-TOPIC = 'test'
+TOPIC = 'telemetry'
 
 #group_id for continue with the broken point
 consumer = KafkaConsumer(TOPIC,bootstrap_servers=[KAFKA_SERVER+KAFKA_PORT],group_id='alex_group',value_deserializer=lambda m: json.loads(m.decode('utf-8')))
