@@ -5,7 +5,7 @@
     
     Grafana shows the data graphic.
     
-    Prometheus alert manager triggered by metric values and invoke webhook to triger actions. 
+    Prometheus alert manager triggered by metric values and invoke webhook actions. 
     
     Prometheus REST like API provides query service via promQL.
     
