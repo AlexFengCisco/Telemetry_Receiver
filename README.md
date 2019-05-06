@@ -128,6 +128,8 @@
 
     Base on Binary code , 1-4 bytes indicate mesage type ...
     
-### Telemetry + prometheus Lab log
+### Telemetry + prometheus lab log
+### Telemetry + InfluxDB lab log
+### Telemetry + Kafka lab log
         
 ### gRPC receiver is under construction
