@@ -2,8 +2,8 @@
     
 ### Python Telemetry Receiver for collection Cisco NX-OS IOS-XR
     
-    Telemetry format includes JSON GPB GPB-kv (Self-Description)
-    This Python sample demo how to collect Telemetry mesasge via UDP and how to Parse message.
+    Telemetry encoding format JSON GPB GPB-kv (Self-Description)
+    A Python sample code demo how to collect Telemetry mesasge via UDP and how to Parse message.
     
     Demo enviroment has N9K and XRv9K 
      N9K x.x.x.x     version : nx-os 9.2.2    JSON GPB-kv
