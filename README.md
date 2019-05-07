@@ -128,7 +128,7 @@
     yang_to_Schema.txt has all yang path to xml schema path maps.
 
 
-### Will consolidate Json and GPB in one py file soon
+### Will consolidate UDP/TCP Json and GPB in one py file soon
 
     Base on Binary code , 1-4 bytes indicate mesage type ...
     
