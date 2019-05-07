@@ -1,6 +1,6 @@
 # Telemetry_Receiver
     
-### Python Telemetry Receiver for collection Cisco NX-OS IOS-XR
+### Python Telemetry Receiver for collection Cisco NX-OS IOS-XR UDP/TCP/gRPC
     
     Telemetry encoding format JSON GPB GPB-kv (Self-Description)
     A Python sample code demo how to collect Telemetry mesasge via UDP and how to Parse message.
@@ -10,6 +10,10 @@
      xrv9k x.x.x.x    version : xrv9k 6.4.1   JSON GPB GPB-kv
      
     Telemetry Receiver UDP : port 57500
+                       gRPC dial-in : port 57400
+    
+    gRPC receiver working in dial in mode , sample codes for both TLS and no-TLS . passed testing under Cisco IOS XR Software, Version 6.4.1
+
     
     NOTE: max UDP protobuf length = 675535 ,header=28 ,real content = 65507 bytes
     
@@ -132,4 +136,3 @@
 ### Telemetry + InfluxDB lab log
 ### Telemetry + Kafka lab log
         
-### gRPC receiver working in dial in mode , sample codes for both TLS and no-TLS . passed testing under Cisco IOS XR Software, Version 6.4.1
