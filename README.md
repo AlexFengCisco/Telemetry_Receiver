@@ -132,4 +132,4 @@
 ### Telemetry + InfluxDB lab log
 ### Telemetry + Kafka lab log
         
-### gRPC receiver is under construction
+### gRPC receiver working in dial in mode , sample codes for both TLS and no-TLS . passed testing in Cisco IOS XR Software, Version 6.4.1
