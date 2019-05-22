@@ -1,4 +1,4 @@
-# Telemetry_Receiver
+# Telemetry Receiver
     
 ### Python Telemetry Receiver for collection Cisco NX-OS IOS-XR UDP/TCP/gRPC
     
