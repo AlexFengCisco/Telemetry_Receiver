@@ -12,7 +12,7 @@
     Telemetry Receiver UDP : port 57500
                        gRPC dial-in : port 57400
     
-    gRPC receiver working in dial in mode , sample codes for both TLS and no-TLS . passed testing under Cisco IOS XR Software, Version 6.4.1
+    gRPC receiver working in dialin/dialout mode , sample codes for both TLS and no-TLS . passed testing under Cisco IOS XR Software, Version 6.4.1
 
     
     NOTE: max UDP protobuf length = 675535 ,header=28 ,real content = 65507 bytes
