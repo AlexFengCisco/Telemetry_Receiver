@@ -13,7 +13,7 @@
                        gRPC dial in : port 57400
                        gRPC dial out : port 50051
     
-    gRPC receiver working in dialin/dialout mode , passed testing with Cisco IOS XR Software, Version 6.4.1
+    gRPC receiver working in dialin/dialout mode , passed testing with Cisco IOS XR Version 6.4.1
 
     
     NOTE: max UDP protobuf length = 675535 ,header=28 ,real content = 65507 bytes
