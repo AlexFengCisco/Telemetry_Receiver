@@ -1,4 +1,7 @@
-
+'''
+    Telemetry GRPC dial out mode , no TLS
+    tested by Cisco IOS XR Software, Version 6.4.1
+'''
 from concurrent import futures
 import time
 import json
