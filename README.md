@@ -10,7 +10,7 @@
      xrv9k x.x.x.x    version : xrv9k 6.4.1   JSON GPB GPB-kv
      
     Telemetry Receiver UDP : port 57500
-                       gRPC dial-in : port 57400
+                       gRPC : port 57400
     
     gRPC receiver working in dialin/dialout mode , sample codes for both TLS and no-TLS . passed testing under Cisco IOS XR Software, Version 6.4.1
 
