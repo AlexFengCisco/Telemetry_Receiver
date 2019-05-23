@@ -31,13 +31,11 @@ class gRPCMdtDialoutServicer(cisco_grpc_dialout_pb2_grpc.gRPCMdtDialoutServicer)
             telemetry_msg = telemetry_pb2.Telemetry()
             telemetry_msg.ParseFromString(new_msg.data)
             jsonStrTelemetry = MessageToJson(telemetry_msg)
-            dictTelemetry = json.loads(jsonStrTelemetry)
+            #dictTelemetry = json.loads(jsonStrTelemetry)
 
-            print(dictTelemetry)
+            #print telemetry json message
+            print(jsonStrTelemetry)
         return cisco_grpc_dialout_pb2.MdtDialoutArgs()
-
-
-
 
 def serve():
     gRPCserver = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
