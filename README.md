@@ -2,12 +2,12 @@
     
 ### Python Telemetry Receiver for collection Cisco NX-OS IOS-XR UDP/TCP/gRPC
     
-    Telemetry encoding format JSON GPB GPB-kv (Self-Description)
     A Python sample code demo how to collect Telemetry mesasge via UDP/gRPC and how to Parse message.
-    
-    Demo enviroment has N9K and XRv9K 
-     N9K x.x.x.x     version : nx-os 9.2.2    JSON GPB-kv
-     xrv9k x.x.x.x    version : xrv9k 6.4.1   JSON GPB GPB-kv
+    Make it easy and fun to build your own telemetry recevier and agile handle telemetry message.
+     
+    Test bed :  N9K and XRv9K 
+        N9K x.x.x.x     version : nx-os 9.2.2    JSON / GPB-kv (Self-Description)
+        xrv9k x.x.x.x    version : xrv9k 6.4.1   JSON / GPB compact / GPB-kv (Self-Description)
      
     Telemetry Receiver UDP : port 57500
                        gRPC dial in : port 57400
