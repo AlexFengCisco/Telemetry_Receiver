@@ -6,15 +6,18 @@
 '''
 import grpc
 import telemetry_pb2
-import ems_grpc_pb2
-from grpc.beta import implementations
+import cisco_grpc_dialin_pb2
+import cisco_grpc_dialin_pb2_grpc
 from google.protobuf.json_format import MessageToJson
 
-channel = implementations.insecure_channel('10.75.58.60', 57400)
-stub = ems_grpc_pb2.beta_create_gRPCConfigOper_stub(channel)
+
+channel = grpc.insecure_channel("10.75.58.60:57400")
+
+stub = cisco_grpc_dialin_pb2_grpc.gRPCConfigOperStub(channel)
 
 sub_id = 'test_sub' # Telemetry MDT subscription
-sub_args = ems_grpc_pb2.CreateSubsArgs(ReqId=1, encode=3, subidstr=sub_id)
+
+sub_args = cisco_grpc_dialin_pb2.CreateSubsArgs(ReqId=1, encode=3, subidstr=sub_id)
 
 timeout = float(100000)
 metadata = [('username', 'cisco'), ('password', 'cisco')]

@@ -68,6 +68,7 @@ b'\x00\x01\x00\x02\x00\x01\x00\x00\x00\x00\x03y
 import socket, struct
 import json
 import time
+import pprint
 
 from socket import inet_ntoa
 
@@ -94,6 +95,8 @@ while True:
         count += 1
         buf, addr = sock.recvfrom(65535)
 
+        print(buf.hex())
+        print("Message Length {}".format(len(buf)))
         #print(buf)
         text_buf = str(buf)
 
@@ -105,6 +108,8 @@ while True:
             json_buff = json.loads(text_buf[text_buf.find('{'):-1])
             #print('no bug')
 
+        print(json_buff)
+        #pprint.pprint(json_buff)
 
         tele_node_id = json_buff['node_id_str']
         tele_path = json_buff['encoding_path']

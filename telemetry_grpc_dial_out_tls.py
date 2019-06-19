@@ -6,12 +6,10 @@ from concurrent import futures
 import time
 import json
 from google.protobuf.json_format import MessageToJson
-from google.protobuf.descriptor import FieldDescriptor
 import grpc
 import telemetry_pb2
 import cisco_grpc_dialout_pb2
 import cisco_grpc_dialout_pb2_grpc
-import uptime_pb2
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24  #grpc time out
 
@@ -33,48 +31,26 @@ class gRPCMdtDialoutServicer(cisco_grpc_dialout_pb2_grpc.gRPCMdtDialoutServicer)
         for new_msg in message:
             telemetry_msg = telemetry_pb2.Telemetry()
             telemetry_msg.ParseFromString(new_msg.data)
-            #print(telemetry_msg)
-            #print(type(telemetry_msg))
-            #print(telemetry_msg.data_gpb.row[0].content)
             jsonStrTelemetry = MessageToJson(telemetry_msg)
-            dictTelemetry = json.loads(jsonStrTelemetry)
+            #dictTelemetry = json.loads(jsonStrTelemetry)
 
             #print telemetry json message
-
             print(jsonStrTelemetry)
-            print("Message Length {}".format(len(jsonStrTelemetry)))
-            print("="*40)
-
-            print(dictTelemetry["encodingPath"])
-            if "dataGpb" in dictTelemetry:
-                print("Message in GPB compact mode")
-
-            if "dataGpbkv" in dictTelemetry:
-                print("message in GPB-kv mode")
-
-            # according to encoding path and dataGpb not dataGpbkv to select with gpb-compact pb2 to be used
-            if dictTelemetry["encodingPath"] == "Cisco-IOS-XR-shellutil-oper:system-time/uptime" and "dataGpb" in dictTelemetry:
-
-
-                gpb_compact_content = telemetry_msg.data_gpb.row[0].content # should be use list method tohandle it
-                #TBD
-                Telemetry_row_content = uptime_pb2.system_uptime()
-                Telemetry_row_content.ParseFromString(gpb_compact_content)
-
-                print(Telemetry_row_content)
-                print("="*40)
-
-
-            #json_dict = proto_to_dict(Telemetry_row_content)
-            #print(json_dict)
-
-
         return cisco_grpc_dialout_pb2.MdtDialoutArgs()
 
 def serve():
+    with open('ems.key','rb') as f:
+        private_key = f.read()
+
+    with open('ems.pem','rb') as f:
+        certificate_chain = f.read()
+
+    #server_credentials = grpc.ssl_server_credentials(((private_key, certificate_chain,),))
+    server_credentials = grpc.ssl_server_credentials([(private_key, certificate_chain)])
     gRPCserver = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     cisco_grpc_dialout_pb2_grpc.add_gRPCMdtDialoutServicer_to_server(gRPCMdtDialoutServicer(), gRPCserver)
-    gRPCserver.add_insecure_port('10.79.99.235:50051')
+    #gRPCserver.add_insecure_port('10.79.99.174:50051')
+    gRPCserver.add_secure_port('192.168.1.128:50051',server_credentials)
 
     gRPCserver.start()
     try:
@@ -84,6 +60,4 @@ def serve():
         gRPCserver.stop(0)
 
 if __name__ == '__main__':
-
-
     serve()

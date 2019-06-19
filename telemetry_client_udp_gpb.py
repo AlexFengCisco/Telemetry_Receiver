@@ -1,8 +1,28 @@
+'''
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |          MSG TYPE             |           ENCODING_TYPE       |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |         MSG_VERSION           |           FLAGS               |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |                           MSG_LENGTH                          |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     ~                                                               ~
+     ~                      PAYLOAD (MSG_LENGTH bytes)               ~
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+     MSG TYPE (2 bytes)  = 1 (for MDT)
+     ENCODING_TYPE (2 bytes) = 1 (GPB), 2 (JSON)
+     MSG_VERSION (2 bytes) = 1
+     FLAGS (2 bytes) = 0
+     MSG_LENGTH (4 bytes)
+'''
+
 
 import socket, struct
 import json
 from google.protobuf.descriptor import FieldDescriptor
 import time
+import pprint
 import telemetry_pb2
 import uptime_pb2 # Telemetry compact GPB proto for uptime
 import qos_pb2 # Telemetry compact GPB proto for QoS policy-map interface statistics
@@ -22,7 +42,7 @@ DECODE_FN_MAP = {
     FieldDescriptor.TYPE_SFIXED64: int,#long
     FieldDescriptor.TYPE_BOOL: bool,
     FieldDescriptor.TYPE_STRING: str,
-    FieldDescriptor.TYPE_BYTES: lambda b: bytes_to_string(b),
+    FieldDescriptor.TYPE_BYTES: bytes,#lambda b: bytes_to_string(b),
     FieldDescriptor.TYPE_ENUM: int,
 }
 
@@ -60,7 +80,7 @@ def proto_to_dict(msg):
 
 # Bind Socket UDP port 57500 as Telemetry recevice server
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(('0.0.0.0', 57500))
+sock.bind(('0.0.0.0', 57501))
 
 count = 0
 
@@ -72,7 +92,9 @@ while True:
     buf, addr = sock.recvfrom(65535)
     Telemetry_content = telemetry_pb2.Telemetry()
 
-    #print(buf)
+    print(buf.hex())
+    print(buf)
+    print("Message Length {}".format(len(buf)))
     #print(len(str(buf)))
     #handle Telemetry UDP GPB kv from NX OS
 
@@ -84,7 +106,7 @@ while True:
         print('Encodig Path :'+Telemetry_content.encoding_path)
         Top_Fields_List = Telemetry_content.data_gpbkv[0].fields
         #print(Top_Fields_List)
-        print('GPB kv format')
+        #print('GPB format')
         for top_field in Top_Fields_List:
             #print(top_field.name)
             if str(top_field.name) == "content":
@@ -104,6 +126,8 @@ while True:
         print('Node :'+Telemetry_content.node_id_str)
         print('IP Address (source port) :' + str(addr))
         print('Encodig Path :' + Telemetry_content.encoding_path)
+        content_json_dict = proto_to_dict(Telemetry_content.data_gpb)
+        print(content_json_dict)
 
 
         if len(str(Telemetry_content.data_gpbkv)) > 2: # Handle GPB kv , in case of unstable A9KV , sometimes sent empty content message
@@ -112,6 +136,7 @@ while True:
             #print(Fields_list)
 
             json_dict = proto_to_dict(Telemetry_content.data_gpbkv[0])
+            #pprint.pprint(json_dict)
             print(json_dict)
 
             for field in Fields_list:
@@ -128,7 +153,9 @@ while True:
                Choose parse decode proto according to message encoding path .....
             '''
             print('GPB compact format')
+
             row_content_buf = (Telemetry_content.data_gpb.row[0].content)
+
 
             if Telemetry_content.encoding_path == 'Cisco-IOS-XR-qos-ma-oper:qos/nodes/node/policy-map/interface-table/interface/input/service-policy-names/service-policy-instance/statistics':
                 print('QoS ')
