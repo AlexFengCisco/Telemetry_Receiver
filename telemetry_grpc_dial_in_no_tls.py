@@ -44,6 +44,7 @@ for segment in stream:
         t = telemetry_pb.ParseFromString(segment.data)
         # print json message
         print(MessageToJson(telemetry_pb))
+        #TBD if gpb-compact ,encoding code = 2
     else:
         #print(json.loads(segment.data.decode(encoding='utf-8')))
         pprint.pprint(json.loads(segment.data.decode(encoding='utf-8')))
