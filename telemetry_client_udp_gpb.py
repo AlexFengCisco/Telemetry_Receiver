@@ -127,8 +127,8 @@ while True:
         print('Node :'+Telemetry_content.node_id_str)
         print('IP Address (source port) :' + str(addr))
         print('Encodig Path :' + Telemetry_content.encoding_path)
-        content_json_dict = proto_to_dict(Telemetry_content.data_gpb)
-        print(MessageToJson(Telemetry_content))
+        content_json_dict = proto_to_dict(Telemetry_content.data_gpb)  # Old proto_to_dict from google public code
+        print(MessageToJson(Telemetry_content)) # new MessageToJson from google public code , will replace proto_to_dict
         print("*"*20)
         print(content_json_dict)
 
