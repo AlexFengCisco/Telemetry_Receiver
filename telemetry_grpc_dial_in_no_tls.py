@@ -14,6 +14,7 @@
     |           json         |     4      |
      -------------------------------------
 
+    code 1 for test only
 '''
 
 import grpc
