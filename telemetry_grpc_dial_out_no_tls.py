@@ -52,7 +52,7 @@ class gRPCMdtDialoutServicer(cisco_grpc_dialout_pb2_grpc.gRPCMdtDialoutServicer)
             if "dataGpbkv" in dictTelemetry:
                 print("message in GPB-kv mode")
 
-            # according to encoding path and dataGpb not dataGpbkv to select with gpb-compact pb2 to be used
+            # according to encoding path and dataGpb OR dataGpbkv to select which gpb-compact pb2 to be used
             if dictTelemetry["encodingPath"] == "Cisco-IOS-XR-shellutil-oper:system-time/uptime" and "dataGpb" in dictTelemetry:
 
 
@@ -69,7 +69,7 @@ class gRPCMdtDialoutServicer(cisco_grpc_dialout_pb2_grpc.gRPCMdtDialoutServicer)
             #print(json_dict)
 
 
-        return cisco_grpc_dialout_pb2.MdtDialoutArgs()
+        return cisco_grpc_dialout_pb2.MdtDialoutArgs()  # no return should be ok , if get telemetry stream only
 
 def serve():
     gRPCserver = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

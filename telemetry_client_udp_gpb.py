@@ -26,6 +26,7 @@ import pprint
 import telemetry_pb2
 import uptime_pb2 # Telemetry compact GPB proto for uptime
 import qos_pb2 # Telemetry compact GPB proto for QoS policy-map interface statistics
+from google.protobuf.json_format import MessageToJson
 
 DECODE_FN_MAP = {
     FieldDescriptor.TYPE_DOUBLE: float,
@@ -127,6 +128,8 @@ while True:
         print('IP Address (source port) :' + str(addr))
         print('Encodig Path :' + Telemetry_content.encoding_path)
         content_json_dict = proto_to_dict(Telemetry_content.data_gpb)
+        print(MessageToJson(Telemetry_content))
+        print("*"*20)
         print(content_json_dict)
 
 
