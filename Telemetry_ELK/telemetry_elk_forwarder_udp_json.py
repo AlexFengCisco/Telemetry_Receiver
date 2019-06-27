@@ -52,7 +52,7 @@ while True:
         else:
             json_buff = json.loads(text_buf[text_buf.find('{'):-1])
 
-        forward(text_buf[text_buf.find('{'):-1])
+        forward(text_buf[text_buf.find('{'):-1])  # cut telemetry 12 bytes header and forward to logstash
 
         tele_node_id = json_buff['node_id_str']
         tele_path = json_buff['encoding_path']
