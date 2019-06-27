@@ -1,3 +1,9 @@
+'''
+    Since UDP Json Telemetry will send full telemetry with 12 bytes header,
+    logstash encode => json can not parse header part. Forwarder will cut the header and forward
+    the real json content to logstash.
+
+'''
 import socket, struct
 import json
 import time
