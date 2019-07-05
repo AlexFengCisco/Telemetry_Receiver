@@ -74,7 +74,7 @@ class gRPCMdtDialoutServicer(cisco_grpc_dialout_pb2_grpc.gRPCMdtDialoutServicer)
 def serve():
     gRPCserver = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     cisco_grpc_dialout_pb2_grpc.add_gRPCMdtDialoutServicer_to_server(gRPCMdtDialoutServicer(), gRPCserver)
-    gRPCserver.add_insecure_port('10.79.99.235:50051')
+    gRPCserver.add_insecure_port('10.79.101.80:50051')
 
     gRPCserver.start()
     try:

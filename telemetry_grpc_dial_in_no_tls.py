@@ -25,7 +25,7 @@ from google.protobuf.json_format import MessageToJson
 import json
 import pprint
 
-encoding_code = 4
+encoding_code = 3
 channel = grpc.insecure_channel("10.75.58.60:57400")
 
 stub = cisco_grpc_dialin_pb2_grpc.gRPCConfigOperStub(channel)
