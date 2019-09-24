@@ -136,6 +136,8 @@
 
     MDS SAN switch 32G line card push telemetry stream via gRPC GPB/GPB-kv encoding
     encoding path should be NX OS analytics:your_query_name 
+    dial-out only
+    see description inside telemetry_grpc_dial_out_no_tls.py
      
 ### Will consolidate UDP/TCP Json and GPB in one py file soon
 
