@@ -132,7 +132,11 @@
     
     yang_to_Schema.txt has all yang path to xml schema path maps.
 
+### Fabric Telemetry for SAN Analytics 
 
+    MDS SAN switch 32G line card push telemetry stream via gRPC GPB/GPB-kv encoding
+    encoding path should be NX OS analytics:your_query_name 
+     
 ### Will consolidate UDP/TCP Json and GPB in one py file soon
 
     Base on Binary code , 1-4 bytes indicate mesage type ...
