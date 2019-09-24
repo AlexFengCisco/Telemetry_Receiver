@@ -1,0 +1,177 @@
+/* ----------------------------------------------------------------------------
+* fabric_telemetry.proto - Fabric Telemetry protobuf definitions
+*
+* July 2018
+*
+* Copyright (c) 2018 by Cisco Systems, Inc.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+* ----------------------------------------------------------------------------
+*/
+
+syntax = "proto3";
+
+option go_package = "fabric_telemetry";
+
+option cc_enable_arenas = true;
+
+message ControlInformation {
+    string version = 1;
+    uint32 chunk_sequence = 2;
+    uint32 total_chunks_count = 3;
+}
+
+message FlowRecordsTable {
+    ControlInformation control_info = 1;
+    repeated FlowRecordRow row = 2;
+}
+
+message FlowRecordRow {
+    string port = 1;
+    uint32 app_id = 2;
+    uint32 vsan = 3;
+    string target_id = 4;
+    string initiator_id = 5;
+    string lun = 6;
+    string exchange_id = 7;
+    uint32 scsi_target_count = 8;
+    uint32 scsi_initiator_count = 9;
+    uint32 io_app_count = 10;
+    uint32 logical_port_count = 11;
+    uint32 scsi_target_app_count = 12;
+    uint32 scsi_initiator_app_count = 13;
+    uint32 active_io_read_count = 14;
+    uint32 active_io_write_count = 15;
+    uint32 scsi_target_tl_flow_count = 16;
+    uint32 scsi_target_it_flow_count = 17;
+    uint32 scsi_initiator_it_flow_count = 18;
+    uint32 scsi_target_itl_flow_count = 19;
+    uint32 scsi_initiator_itl_flow_count = 20;
+    uint32 scsi_target_lun_count = 21;
+    uint32 scsi_target_entity_it_flow_count = 22;
+    uint32 scsi_initiator_entity_it_flow_count = 23;
+    uint32 scsi_target_entity_itl_flow_count = 24;
+    uint32 scsi_initiator_entity_itl_flow_count = 25;
+    uint64 sampling_start_time = 26;
+    uint64 sampling_end_time = 27;
+    string extended_exchange_id = 28;
+    string io_lba = 29;
+    uint32 io_size = 30;
+    uint64 total_read_io_count = 31;
+    uint64 total_write_io_count = 32;
+    uint64 total_seq_read_io_count = 33;
+    uint64 total_seq_write_io_count = 34;
+    uint64 total_read_io_time = 35;
+    uint64 total_write_io_time = 36;
+    uint64 total_read_io_initiation_time = 37;
+    uint64 total_write_io_initiation_time = 38;
+    uint64 total_read_io_bytes = 39;
+    uint64 total_write_io_bytes = 40;
+    uint64 total_read_io_inter_gap_time = 41;
+    uint64 total_write_io_inter_gap_time = 42;
+    uint64 total_time_metric_based_read_io_count = 43;
+    uint64 total_time_metric_based_write_io_count = 44;
+    uint64 total_time_metric_based_read_io_bytes = 45;
+    uint64 total_time_metric_based_write_io_bytes = 46;
+    uint64 io_start_time = 47;
+    uint32 read_io_rate = 48;
+    uint32 peak_read_io_rate = 49;
+    uint32 write_io_rate = 50;
+    uint32 peak_write_io_rate = 51;
+    uint32 read_io_bandwidth = 52;
+    uint32 peak_read_io_bandwidth = 53;
+    uint32 write_io_bandwidth = 54;
+    uint32 peak_write_io_bandwidth = 55;
+    uint32 read_io_size_min = 56;
+    uint32 read_io_size_max = 57;
+    uint32 write_io_size_min = 58;
+    uint32 write_io_size_max = 59;
+    uint32 read_io_completion_time_min = 60;
+    uint32 read_io_completion_time_max = 61;
+    uint32 write_io_completion_time_min = 62;
+    uint32 write_io_completion_time_max = 63;
+    uint32 read_io_initiation_time_min = 64;
+    uint32 read_io_initiation_time_max = 65;
+    uint32 write_io_initiation_time_min = 66;
+    uint32 write_io_initiation_time_max = 67;
+    uint32 read_io_inter_gap_time_min = 68;
+    uint32 read_io_inter_gap_time_max = 69;
+    uint32 write_io_inter_gap_time_min = 70;
+    uint32 write_io_inter_gap_time_max = 71;
+    uint32 peak_active_io_read_count = 72;
+    uint32 peak_active_io_write_count = 73;
+    uint32 read_io_aborts = 74;
+    uint32 write_io_aborts = 75;
+    uint32 read_io_failures = 76;
+    uint32 write_io_failures = 77;
+    uint32 read_io_timeouts = 78;
+    uint32 write_io_timeouts = 79;
+    uint32 read_io_scsi_check_condition_count = 80;
+    uint32 write_io_scsi_check_condition_count = 81;
+    uint32 read_io_scsi_busy_count = 82;
+    uint32 write_io_scsi_busy_count = 83;
+    uint32 read_io_scsi_reservation_conflict_count = 84;
+    uint32 write_io_scsi_reservation_conflict_count = 85;
+    uint32 read_io_scsi_queue_full_count = 86;
+    uint32 write_io_scsi_queue_full_count = 87;
+    uint32 read_io_rate_exceed_count = 88;
+    uint32 write_io_rate_exceed_count = 89;
+    uint32 read_io_bandwidth_exceed_count = 90;
+    uint32 write_io_bandwidth_exceed_count = 91;
+    uint32 read_io_size_min_exceed_count = 92;
+    uint32 read_io_size_max_exceed_count = 93;
+    uint32 write_io_size_min_exceed_count = 94;
+    uint32 write_io_size_max_exceed_count = 95;
+    uint32 read_io_initiation_time_min_exceed_count = 96;
+    uint32 read_io_initiation_time_max_exceed_count = 97;
+    uint32 write_io_initiation_time_min_exceed_count = 98;
+    uint32 write_io_initiation_time_max_exceed_count = 99;
+    uint32 read_io_completion_time_min_exceed_count = 100;
+    uint32 read_io_completion_time_max_exceed_count = 101;
+    uint32 write_io_completion_time_min_exceed_count = 102;
+    uint32 write_io_completion_time_max_exceed_count = 103;
+    uint32 read_io_inter_gap_time_min_exceed_count = 104;
+    uint32 read_io_inter_gap_time_max_exceed_count = 105;
+    uint32 write_io_inter_gap_time_min_exceed_count = 106;
+    uint32 write_io_inter_gap_time_max_exceed_count = 107;
+    uint32 read_io_abort_exceed_count = 108;
+    uint32 write_io_abort_exceed_count = 109;
+    uint32 read_io_failure_exceed_count = 110;
+    uint32 write_io_failure_exceed_count = 111;
+    uint64 total_abts_count = 112;
+    uint32 namespace_id = 113;
+    string connection_id = 114;
+    uint32 nvme_target_count = 115;
+    uint32 nvme_initiator_count = 116;
+    uint32 nvme_target_app_count = 117;
+    uint32 nvme_initiator_app_count = 118;
+    uint32 nvme_target_tn_flow_count = 119;
+    uint32 nvme_target_it_flow_count = 120;
+    uint32 nvme_initiator_it_flow_count = 121;
+    uint32 nvme_target_itn_flow_count = 122;
+    uint32 nvme_initiator_itn_flow_count = 123;
+    uint32 nvme_target_namespace_count = 124;
+    uint32 nvme_target_entity_it_flow_count = 125;
+    uint32 nvme_initiator_entity_it_flow_count = 126;
+    uint32 nvme_target_entity_itn_flow_count = 127;
+    uint32 nvme_initiator_entity_itn_flow_count = 128;
+    uint32 read_io_nvme_lba_out_of_range_count = 129;
+    uint32 write_io_nvme_lba_out_of_range_count = 130;
+    uint32 read_io_nvme_ns_not_ready_count = 131;
+    uint32 write_io_nvme_ns_not_ready_count = 132;
+    uint32 read_io_nvme_reservation_conflict_count = 133;
+    uint32 write_io_nvme_reservation_conflict_count = 134;
+    uint32 read_io_nvme_capacity_exceeded_count = 135;
+    uint32 write_io_nvme_capacity_exceeded_count = 136;
+
+}
