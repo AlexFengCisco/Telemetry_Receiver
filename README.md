@@ -140,45 +140,45 @@
     see sample code telemetry_grpc_dial_out_no_tls.py
     
     So far , NX OS 8.4.1 only support gRPC GPB/GPB-kv
-                for GPB-kv encoding with fabrc_telemetry.proto file.
-                
-                MDS 9710 sample configuration:
-                 
-                telemetry
-                    sensor-group 1
-                    path analytics:test_query
-                    path show_stats_fc2/1
-                    path show_stats_fc2/2
-                    sensor-group 2
-                    path analytics:dcnminitITL
-                    destination-group 1
-                    ip address 10.79.98.77 port 50051 protocol gRPC encoding GPB-compact
-                    destination-group 2
-                    ip address 10.124.2.116 port 57500 protocol gRPC encoding GPB-compact
-                    subscription 1
-                    snsr-grp 1 sample-interval 30000
-                    dst-grp 1
-                    subscription 2
-                    snsr-grp 2 sample-interval 30000
-                    dst-grp 2
-                    
-                sw-core1-9710# sh analytics query all
-                Total queries:2
-                ============================
-                Query Name      :test_query
-                Query String    :select all from fc-scsi.port
-                Query Type      :periodic, interval 30
-                
-                Query Name      :dcnminitITL
-                Query String    :select port, vsan, app_id, initiator_id, target_id, lun, active_io_read_count, active_io_write_count, total_read_io_count, total_write
-                _io_count, total_time_metric_based_read_io_count, total_time_metric_based_write_io_count,total_read_io_time, total_write_io_time, total_read_io_initiat
-                ion_time, total_write_io_initiation_time,total_read_io_bytes, total_write_io_bytes, total_time_metric_based_read_io_bytes, total_time_metric_based_writ
-                e_io_bytes, read_io_rate, write_io_rate, read_io_bandwidth, write_io_bandwidth,read_io_size_min, read_io_size_max, write_io_size_min, write_io_size_max
-                ,read_io_completion_time_min, read_io_completion_time_max, write_io_completion_time_min, write_io_completion_time_max,read_io_initiation_time_max, writ
-                e_io_initiation_time_max, read_io_aborts, write_io_aborts,read_io_failures, write_io_failures, read_io_timeouts, write_io_timeouts from fc-scsi.scsi_in
-                itiator_itl_flow
-                Query Type      :periodic, interval 30
-                Query Options   :differential
+    for GPB-kv encoding with fabrc_telemetry.proto file.
+    
+    MDS 9710 sample configuration:
+     
+    telemetry
+        sensor-group 1
+        path analytics:test_query
+        path show_stats_fc2/1
+        path show_stats_fc2/2
+        sensor-group 2
+        path analytics:dcnminitITL
+        destination-group 1
+        ip address 10.79.98.77 port 50051 protocol gRPC encoding GPB-compact
+        destination-group 2
+        ip address 10.124.2.116 port 57500 protocol gRPC encoding GPB-compact
+        subscription 1
+        snsr-grp 1 sample-interval 30000
+        dst-grp 1
+        subscription 2
+        snsr-grp 2 sample-interval 30000
+        dst-grp 2
+        
+    sw-core1-9710# sh analytics query all
+    Total queries:2
+    ============================
+    Query Name      :test_query
+    Query String    :select all from fc-scsi.port
+    Query Type      :periodic, interval 30
+    
+    Query Name      :dcnminitITL
+    Query String    :select port, vsan, app_id, initiator_id, target_id, lun, active_io_read_count, active_io_write_count, total_read_io_count, total_write
+    _io_count, total_time_metric_based_read_io_count, total_time_metric_based_write_io_count,total_read_io_time, total_write_io_time, total_read_io_initiat
+    ion_time, total_write_io_initiation_time,total_read_io_bytes, total_write_io_bytes, total_time_metric_based_read_io_bytes, total_time_metric_based_writ
+    e_io_bytes, read_io_rate, write_io_rate, read_io_bandwidth, write_io_bandwidth,read_io_size_min, read_io_size_max, write_io_size_min, write_io_size_max
+    ,read_io_completion_time_min, read_io_completion_time_max, write_io_completion_time_min, write_io_completion_time_max,read_io_initiation_time_max, writ
+    e_io_initiation_time_max, read_io_aborts, write_io_aborts,read_io_failures, write_io_failures, read_io_timeouts, write_io_timeouts from fc-scsi.scsi_in
+    itiator_itl_flow
+    Query Type      :periodic, interval 30
+    Query Options   :differential
                     
      
 ### Will consolidate UDP/TCP Json and GPB in one py file soon
