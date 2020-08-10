@@ -109,12 +109,13 @@ while True:
             #print('no bug')
 
         print(json_buff)
-        #pprint.pprint(json_buff)
+        pprint.pprint(json_buff)
 
         tele_node_id = json_buff['node_id_str']
         tele_path = json_buff['encoding_path']
         tele_collection_id = str(json_buff['collection_id'])
-        tele_data = json_buff['data_json'][0]['content']
+        #tele_data = json_buff['data_json'][0]['content']
+        tele_data = json_buff['data'] #
 
         if tele_path == 'Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization':
 

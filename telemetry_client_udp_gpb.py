@@ -81,7 +81,7 @@ def proto_to_dict(msg):
 
 # Bind Socket UDP port 57500 as Telemetry recevice server
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(('0.0.0.0', 57501))
+sock.bind(('0.0.0.0', 57500))
 
 count = 0
 

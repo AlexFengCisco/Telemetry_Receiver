@@ -131,7 +131,8 @@ message TelemetryRowGPB {
   // ends in a list element, the keys field is a GPB encoded message that
   // contains the sequence of key values for each such list element in the
   // encoding-path traversed starting from the root.  The set of keys
-  // unambiguously identifies the instance of data encoded in the
+  // unambiguously identifies the inst
+  ance of data encoded in the
   // TelemetryRowGPB message. Corresponding protobuf message definition will
   // be required to decode the byte stream. The encoding_path field in
   // Telemetry message, together with model_version field should be

@@ -16,7 +16,7 @@
     gRPC receiver working in dialin/dialout mode , passed testing with Cisco IOS XR Version 6.4.1
 
     
-    NOTE: max UDP protobuf length = 675535 ,header=28 ,real content = 65507 bytes
+    NOTE: max UDP protobuf length = 65535 ,header=28 ,real content = 65507 bytes
     
     Inside internal MDT header, IOS-XR has 12 bytes header, NX-OS has 6 bytes 
     

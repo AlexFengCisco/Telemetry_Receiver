@@ -38,7 +38,7 @@ service gRPCConfigOper {
 // Should we seperate Exec from Config/Oper?
 //
 
-service gRPCExec {
+service   {
 // Exec commands
     rpc ShowCmdTextOutput(ShowCmdArgs) returns(stream ShowCmdTextReply) {};
     rpc ShowCmdJSONOutput(ShowCmdArgs) returns(stream ShowCmdJSONReply) {};
