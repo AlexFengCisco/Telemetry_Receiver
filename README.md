@@ -149,18 +149,12 @@
         path analytics:test_query
         path show_stats_fc2/1
         path show_stats_fc2/2
-        sensor-group 2
-        path analytics:dcnminitITL
         destination-group 1
         ip address 10.79.98.77 port 50051 protocol gRPC encoding GPB-compact
-        destination-group 2
-        ip address 10.124.2.116 port 57500 protocol gRPC encoding GPB-compact
         subscription 1
         snsr-grp 1 sample-interval 30000
         dst-grp 1
-        subscription 2
-        snsr-grp 2 sample-interval 30000
-        dst-grp 2
+       
         
     sw-core1-9710# sh analytics query all
     Total queries:2
