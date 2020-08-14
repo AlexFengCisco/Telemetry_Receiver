@@ -38,7 +38,7 @@ class gRPCMdtDialoutServicer(cisco_grpc_dialout_pb2_grpc.gRPCMdtDialoutServicer)
             telemetry_msg = telemetry_pb2.Telemetry()
             telemetry_msg.ParseFromString(new_msg.data)
             #print("RAW message")
-            #print(telemetry_msg)
+            print(telemetry_msg)
             print("="*100)
             #print(type(telemetry_msg))
             #print(telemetry_msg.data_gpb.row[0].content)
@@ -84,6 +84,27 @@ class gRPCMdtDialoutServicer(cisco_grpc_dialout_pb2_grpc.gRPCMdtDialoutServicer)
 
 
                 #Telemetry_row_content = fabric_telemetry_pb2.FlowRecordRow()
+
+                Telemetry_row_content.ParseFromString(gpb_compact_content)
+
+                fabric_jsonStrTelemetry = MessageToJson(Telemetry_row_content)
+
+                print(fabric_jsonStrTelemetry)
+                print("=" * 40)
+
+            if dictTelemetry["encodingPath"] == "show_stats_fc2/2" and "dataGpb" in dictTelemetry:
+                '''
+                MDS 97 32G line card SAN Analytics feature,
+                encoding path should be predefined push analytics query name.
+
+
+                '''
+
+                gpb_compact_content = telemetry_msg.data_gpb.row[0].content  # should be use list method tohandle it
+                # gpb_compact_content = telemetry_msg.data_gpb.row[0]
+                Telemetry_row_content = fabric_telemetry_pb2.FlowRecordsTable()
+
+                # Telemetry_row_content = fabric_telemetry_pb2.FlowRecordRow()
 
                 Telemetry_row_content.ParseFromString(gpb_compact_content)
 
