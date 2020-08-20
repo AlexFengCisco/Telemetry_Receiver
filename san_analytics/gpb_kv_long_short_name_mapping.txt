@@ -1,0 +1,128 @@
+Metrics list and corresponding short names for the ITL view. Format (old_verbose_name:new_short_name)
+
+
+
+port: port
+
+vsan: vsan
+
+app_id: app_id
+
+target_id: did
+
+initiator_id: sid
+
+lun: lun
+
+active_io_read_count: raIO
+
+active_io_write_count: waIO
+
+total_read_io_count: rtIO
+
+total_write_io_count: wtIO
+
+total_seq_read_io_count: rstIOc
+
+total_seq_write_io_count: wrstIOc
+
+total_read_io_time: rtIOt
+
+total_write_io_time: wtIOt
+
+total_read_io_initiation_time: rtIOint
+
+total_write_io_initiation_time: wtIOint
+
+total_read_io_bytes: rtIOb
+
+total_write_io_bytes: wtIOb
+
+total_read_io_inter_gap_time: rtIOigt
+
+total_write_io_inter_gap_time: wtIOigt
+
+total_time_metric_based_read_io_count: tmrtIOc
+
+total_time_metric_based_write_io_count: tmwtIOc
+
+read_io_rate: rIOr
+
+peak_read_io_rate: prIOr
+
+write_io_rate: wIOr
+
+peak_write_io_rate: pwIOr
+
+read_io_bandwidth: rIObw
+
+peak_read_io_bandwidth: prIObw
+
+write_io_bandwidth: wIObw
+
+peak_write_io_bandwidth: pwIObw
+
+read_io_size_min: rIOsMi
+
+read_io_size_max: rIOsMa
+
+write_io_size_min: wIOsMi
+
+write_io_size_max: wIOsMa
+
+read_io_completion_time_min: rIOctMi
+
+read_io_completion_time_max: rIOctMa
+
+write_io_completion_time_min: wIOctMi
+
+write_io_completion_time_max: wIOctMa
+
+read_io_initiation_time_min: rIOitMi
+
+read_io_initiation_time_max: rIOitMa
+
+write_io_initiation_time_min: wIOitMi
+
+write_io_initiation_time_max: wIOitMa
+
+read_io_inter_gap_time_min: rIOigtMi
+
+read_io_inter_gap_time_max: rIOigtMa
+
+write_io_inter_gap_time_min: wIOigtMi
+
+write_io_inter_gap_time_max: wIOigtMa
+
+peak_active_io_read_count: paIOrc
+
+peak_active_io_write_count: paIOwc
+
+read_io_aborts: rIOa
+
+write_io_aborts: wIOa
+
+read_io_failures: rIOf
+
+write_io_failures: wIOf
+
+read_io_timeouts: rIOTo
+
+write_io_timeouts: wIOTo
+
+read_io_scsi_check_condition_count: rIOSchcoct
+
+write_io_scsi_check_condition_count: wIOSchcoct
+
+read_io_scsi_busy_count: rIOsbc
+
+write_io_scsi_busy_count: wIOsbc
+
+read_io_scsi_reservation_conflict_count: rIOSrecct
+
+write_io_scsi_reservation_conflict_count: wIOSrecct
+
+read_io_scsi_queue_full_count: rIOSQfct
+
+write_io_scsi_queue_full_count: wIOSQfct
+

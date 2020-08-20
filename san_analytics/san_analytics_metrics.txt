@@ -1,0 +1,78 @@
+1. Normalized READ & WRITE ECT in ms/KB:
+
+(total_read_io_time_t2 - total_read_io_time_t1)/
+
+(total_time_metric_based_read_io_bytes_t2 - total_time_metric_based_read_io_bytes_t1)
+
+(total_write_io_time_t2 - total_write_io_time_t1)/
+
+(total_time_metric_based_write_io_bytes_t2 - total_time_metric_based_write_io_bytes_t1)
+
+
+
+2. Normalized Read & Write DAL in ms/KB:
+
+(total_read_io_initiation_time_t2 - total_read_io_initiation_time_t1)/
+
+(total_time_metric_based_read_io_bytes_t2 - total_time_metric_based_read_io_bytes_t1)
+
+(total_write_io_initiation_time_t2 - total_write_io_initiation_time_t1)/
+
+(total_time_metric_based_write_io_bytes_t2 - total_time_metric_based_write_io_bytes_t1)
+
+
+
+3. Avg READ & WRITE ECT per IO:
+
+(total_read_io_time_t2 - total_read_io_time_t1) /
+
+(total_time_metric_based_read_io_count_t2 - total_time_metric_based_read_io_count_t1)
+
+(total_write_io_time_t2 - total_write_io_time_t1) /
+
+(total_time_metric_based_write_io_count_t2 - total_time_metric_based_write_io_count_t1)
+
+
+
+4. Avg Read & Write IOPS:
+
+(total_read_io_count_t2 - total_read_io_count_t1)/
+
+(sampling_end_time - sampling_start_time) in seconds
+
+(total_write_io_count_t2 - total_write_io_count_t1)/
+
+(sampling_end_time - sampling_start_time) in seconds
+
+
+
+5. Avg Read & Write IO Size:
+
+total_read_io_bytes/total_read_io_count
+
+total_write_io_bytes/total_write_io_count
+
+
+
+Notes:
+
+1) The following metrics are today not part of streaming metrics today and will be added shortly.
+
+- total_time_metric_based_read_io_bytes
+
+- total_time_metric_based_write_io_bytes
+
+Till then please use total_read_io_bytes and total_write_io_bytes as a substitute of the above.
+
+
+
+2) Avg Read/Write IOPs computation can be incorrect when port sampling interval and streaming interval are configured to be different.
+
+However for NX-OS C-release we are recommending that these two values should be the same.
+
+Hence we can use the above formula for now and fix it for all combinations of timers in the next release.
+
+
+
+3) Pls map all the above metric names to the appropriate GPBKV short names.
+

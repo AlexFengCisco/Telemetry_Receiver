@@ -179,6 +179,9 @@
     itiator_itl_flow
     Query Type      :periodic, interval 30
     Query Options   :differential
+    
+    fot SAN Analytics metrics detail please refer to san_analytics sub folder
+    
                     
      
 ### Will consolidate UDP/TCP Json and GPB in one py file soon
