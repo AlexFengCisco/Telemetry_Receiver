@@ -180,7 +180,7 @@
     Query Type      :periodic, interval 30
     Query Options   :differential
     
-    fot SAN Analytics metrics detail please refer to san_analytics sub folder
+    For SAN Analytics metrics detail please refer to san_analytics sub folder
     
                     
      
