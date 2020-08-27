@@ -7,6 +7,6 @@
 
     Demo code for predictor deep learning engine with LSTM RNN 
     
-#### Telemetry Traffic / Payload Collection and Prediction sample 
+### Telemetry Traffic / Payload Collection and Prediction sample 
 
 ![N|Solid](predict_result.png)
