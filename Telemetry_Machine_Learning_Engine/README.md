@@ -6,3 +6,7 @@
     result  return evaluated observed and prdicted value and all times ,
 
     Demo code for predictor deep learning engine with LSTM RNN 
+    
+#### Telemetry Traffic / Payload Collection and Prediction sample 
+
+   ![N|Solid](predict_result.png)
