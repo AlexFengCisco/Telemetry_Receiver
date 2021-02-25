@@ -70,7 +70,8 @@ class gRPCMdtDialoutServicer(cisco_grpc_dialout_pb2_grpc.gRPCMdtDialoutServicer)
                 print(Telemetry_row_content)
                 print("="*40)
 
-            if dictTelemetry["encodingPath"] == "analytics:test_query" and "dataGpb" in dictTelemetry:
+            #if dictTelemetry["encodingPath"] == "analytics:test_query" and "dataGpb" in dictTelemetry:
+            if dictTelemetry["encodingPath"] == "analytics:dcnminitITL" and "dataGpb" in dictTelemetry:
                 '''
                 MDS 97 32G line card SAN Analytics feature,
                 encoding path should be predefined push analytics query name.

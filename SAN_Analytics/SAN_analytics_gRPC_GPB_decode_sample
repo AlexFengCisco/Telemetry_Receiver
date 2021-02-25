@@ -1,0 +1,1038 @@
+
+{"telemetry_node": "10.75.60.4", "telemetry_node_port": "42294"}
+node_id_str: "BJ-MDS9710"
+subscription_id_str: "2"
+encoding_path: "analytics:dcnminitITL"
+collection_id: 62550
+msg_timestamp: 1614224486518
+data_gpbkv {
+  fields {
+    name: "keys"
+    fields {
+      name: "analytics:dcnminitITL"
+      string_value: "analytics:dcnminitITL"
+    }
+  }
+  fields {
+    name: "content"
+    fields {
+      fields {
+        name: "control_info"
+        fields {
+          fields {
+            name: "version"
+            string_value: "1.0.0.1"
+          }
+          fields {
+            name: "chunk_sequence"
+            string_value: "1"
+          }
+          fields {
+            name: "total_chunks_count"
+            string_value: "1"
+          }
+        }
+      }
+      fields {
+        name: "values"
+        fields {
+          fields {
+            name: "1"
+            fields {
+              fields {
+                name: "port"
+                string_value: "fc2/15"
+              }
+              fields {
+                name: "vsan"
+                string_value: "100"
+              }
+              fields {
+                name: "app_id"
+                string_value: "255"
+              }
+              fields {
+                name: "sid"
+                string_value: "0x750000"
+              }
+              fields {
+                name: "did"
+                string_value: "0xef0020"
+              }
+              fields {
+                name: "lun"
+                string_value: "0000-0000-0000-0000"
+              }
+              fields {
+                name: "raIO"
+                string_value: "0"
+              }
+              fields {
+                name: "waIO"
+                string_value: "60"
+              }
+              fields {
+                name: "rtIO"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIO"
+                string_value: "54485918039"
+              }
+              fields {
+                name: "tmrtIOc"
+                string_value: "0"
+              }
+              fields {
+                name: "tmwtIOc"
+                string_value: "54485917593"
+              }
+              fields {
+                name: "rtIOt"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOt"
+                string_value: "97549500867153"
+              }
+              fields {
+                name: "rtIOint"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOint"
+                string_value: "45617984577183"
+              }
+              fields {
+                name: "rtIOb"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOb"
+                string_value: "27896790035968"
+              }
+              fields {
+                name: "tmrtIOb"
+                string_value: "0"
+              }
+              fields {
+                name: "tmwtIOb"
+                string_value: "27896789807616"
+              }
+              fields {
+                name: "rIObw"
+                string_value: "0"
+              }
+              fields {
+                name: "wIObw"
+                string_value: "17215488"
+              }
+              fields {
+                name: "rIOa"
+                string_value: "0"
+              }
+              fields {
+                name: "wIOa"
+                string_value: "0"
+              }
+              fields {
+                name: "rIOf"
+                string_value: "0"
+              }
+              fields {
+                name: "wIOf"
+                string_value: "0"
+              }
+              fields {
+                name: "samStm"
+                string_value: "1614224440"
+              }
+              fields {
+                name: "samEtm"
+                string_value: "1614224470"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+====================================================================================================
+{
+  "nodeIdStr": "BJ-MDS9710",
+  "subscriptionIdStr": "2",
+  "encodingPath": "analytics:dcnminitITL",
+  "collectionId": "62550",
+  "msgTimestamp": "1614224486518",
+  "dataGpbkv": [
+    {
+      "fields": [
+        {
+          "name": "keys",
+          "fields": [
+            {
+              "name": "analytics:dcnminitITL",
+              "stringValue": "analytics:dcnminitITL"
+            }
+          ]
+        },
+        {
+          "name": "content",
+          "fields": [
+            {
+              "fields": [
+                {
+                  "name": "control_info",
+                  "fields": [
+                    {
+                      "fields": [
+                        {
+                          "name": "version",
+                          "stringValue": "1.0.0.1"
+                        },
+                        {
+                          "name": "chunk_sequence",
+                          "stringValue": "1"
+                        },
+                        {
+                          "name": "total_chunks_count",
+                          "stringValue": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "values",
+                  "fields": [
+                    {
+                      "fields": [
+                        {
+                          "name": "1",
+                          "fields": [
+                            {
+                              "fields": [
+                                {
+                                  "name": "port",
+                                  "stringValue": "fc2/15"
+                                },
+                                {
+                                  "name": "vsan",
+                                  "stringValue": "100"
+                                },
+                                {
+                                  "name": "app_id",
+                                  "stringValue": "255"
+                                },
+                                {
+                                  "name": "sid",
+                                  "stringValue": "0x750000"
+                                },
+                                {
+                                  "name": "did",
+                                  "stringValue": "0xef0020"
+                                },
+                                {
+                                  "name": "lun",
+                                  "stringValue": "0000-0000-0000-0000"
+                                },
+                                {
+                                  "name": "raIO",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "waIO",
+                                  "stringValue": "60"
+                                },
+                                {
+                                  "name": "rtIO",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIO",
+                                  "stringValue": "54485918039"
+                                },
+                                {
+                                  "name": "tmrtIOc",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "tmwtIOc",
+                                  "stringValue": "54485917593"
+                                },
+                                {
+                                  "name": "rtIOt",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOt",
+                                  "stringValue": "97549500867153"
+                                },
+                                {
+                                  "name": "rtIOint",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOint",
+                                  "stringValue": "45617984577183"
+                                },
+                                {
+                                  "name": "rtIOb",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOb",
+                                  "stringValue": "27896790035968"
+                                },
+                                {
+                                  "name": "tmrtIOb",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "tmwtIOb",
+                                  "stringValue": "27896789807616"
+                                },
+                                {
+                                  "name": "rIObw",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIObw",
+                                  "stringValue": "17215488"
+                                },
+                                {
+                                  "name": "rIOa",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIOa",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "rIOf",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIOf",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "samStm",
+                                  "stringValue": "1614224440"
+                                },
+                                {
+                                  "name": "samEtm",
+                                  "stringValue": "1614224470"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+Message Length 6765
+========================================
+analytics:dcnminitITL
+message in GPB-kv mode
+{"telemetry_node": "10.75.60.4", "telemetry_node_port": "42294"}
+node_id_str: "BJ-MDS9710"
+subscription_id_str: "2"
+encoding_path: "analytics:dcnminitITL"
+collection_id: 62550
+msg_timestamp: 1614224486518
+data_gpbkv {
+  fields {
+    name: "keys"
+    fields {
+      name: "analytics:dcnminitITL"
+      string_value: "analytics:dcnminitITL"
+    }
+  }
+  fields {
+    name: "content"
+    fields {
+      fields {
+        name: "control_info"
+        fields {
+          fields {
+            name: "version"
+            string_value: "1.0.0.1"
+          }
+          fields {
+            name: "chunk_sequence"
+            string_value: "1"
+          }
+          fields {
+            name: "total_chunks_count"
+            string_value: "1"
+          }
+        }
+      }
+      fields {
+        name: "values"
+        fields {
+          fields {
+            name: "1"
+            fields {
+              fields {
+                name: "port"
+                string_value: "fc2/15"
+              }
+              fields {
+                name: "vsan"
+                string_value: "100"
+              }
+              fields {
+                name: "app_id"
+                string_value: "255"
+              }
+              fields {
+                name: "sid"
+                string_value: "0x750000"
+              }
+              fields {
+                name: "did"
+                string_value: "0xef0020"
+              }
+              fields {
+                name: "lun"
+                string_value: "0000-0000-0000-0000"
+              }
+              fields {
+                name: "raIO"
+                string_value: "0"
+              }
+              fields {
+                name: "waIO"
+                string_value: "60"
+              }
+              fields {
+                name: "rtIO"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIO"
+                string_value: "54485918039"
+              }
+              fields {
+                name: "tmrtIOc"
+                string_value: "0"
+              }
+              fields {
+                name: "tmwtIOc"
+                string_value: "54485917593"
+              }
+              fields {
+                name: "rtIOt"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOt"
+                string_value: "97549500867153"
+              }
+              fields {
+                name: "rtIOint"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOint"
+                string_value: "45617984577183"
+              }
+              fields {
+                name: "rtIOb"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOb"
+                string_value: "27896790035968"
+              }
+              fields {
+                name: "tmrtIOb"
+                string_value: "0"
+              }
+              fields {
+                name: "tmwtIOb"
+                string_value: "27896789807616"
+              }
+              fields {
+                name: "rIObw"
+                string_value: "0"
+              }
+              fields {
+                name: "wIObw"
+                string_value: "17215488"
+              }
+              fields {
+                name: "rIOa"
+                string_value: "0"
+              }
+              fields {
+                name: "wIOa"
+                string_value: "0"
+              }
+              fields {
+                name: "rIOf"
+                string_value: "0"
+              }
+              fields {
+                name: "wIOf"
+                string_value: "0"
+              }
+              fields {
+                name: "samStm"
+                string_value: "1614224440"
+              }
+              fields {
+                name: "samEtm"
+                string_value: "1614224470"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+====================================================================================================
+{
+  "nodeIdStr": "BJ-MDS9710",
+  "subscriptionIdStr": "2",
+  "encodingPath": "analytics:dcnminitITL",
+  "collectionId": "62550",
+  "msgTimestamp": "1614224486518",
+  "dataGpbkv": [
+    {
+      "fields": [
+        {
+          "name": "keys",
+          "fields": [
+            {
+              "name": "analytics:dcnminitITL",
+              "stringValue": "analytics:dcnminitITL"
+            }
+          ]
+        },
+        {
+          "name": "content",
+          "fields": [
+            {
+              "fields": [
+                {
+                  "name": "control_info",
+                  "fields": [
+                    {
+                      "fields": [
+                        {
+                          "name": "version",
+                          "stringValue": "1.0.0.1"
+                        },
+                        {
+                          "name": "chunk_sequence",
+                          "stringValue": "1"
+                        },
+                        {
+                          "name": "total_chunks_count",
+                          "stringValue": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "values",
+                  "fields": [
+                    {
+                      "fields": [
+                        {
+                          "name": "1",
+                          "fields": [
+                            {
+                              "fields": [
+                                {
+                                  "name": "port",
+                                  "stringValue": "fc2/15"
+                                },
+                                {
+                                  "name": "vsan",
+                                  "stringValue": "100"
+                                },
+                                {
+                                  "name": "app_id",
+                                  "stringValue": "255"
+                                },
+                                {
+                                  "name": "sid",
+                                  "stringValue": "0x750000"
+                                },
+                                {
+                                  "name": "did",
+                                  "stringValue": "0xef0020"
+                                },
+                                {
+                                  "name": "lun",
+                                  "stringValue": "0000-0000-0000-0000"
+                                },
+                                {
+                                  "name": "raIO",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "waIO",
+                                  "stringValue": "60"
+                                },
+                                {
+                                  "name": "rtIO",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIO",
+                                  "stringValue": "54485918039"
+                                },
+                                {
+                                  "name": "tmrtIOc",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "tmwtIOc",
+                                  "stringValue": "54485917593"
+                                },
+                                {
+                                  "name": "rtIOt",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOt",
+                                  "stringValue": "97549500867153"
+                                },
+                                {
+                                  "name": "rtIOint",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOint",
+                                  "stringValue": "45617984577183"
+                                },
+                                {
+                                  "name": "rtIOb",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOb",
+                                  "stringValue": "27896790035968"
+                                },
+                                {
+                                  "name": "tmrtIOb",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "tmwtIOb",
+                                  "stringValue": "27896789807616"
+                                },
+                                {
+                                  "name": "rIObw",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIObw",
+                                  "stringValue": "17215488"
+                                },
+                                {
+                                  "name": "rIOa",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIOa",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "rIOf",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIOf",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "samStm",
+                                  "stringValue": "1614224440"
+                                },
+                                {
+                                  "name": "samEtm",
+                                  "stringValue": "1614224470"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+Message Length 6765
+========================================
+analytics:dcnminitITL
+message in GPB-kv mode
+{"telemetry_node": "10.75.60.4", "telemetry_node_port": "42294"}
+node_id_str: "BJ-MDS9710"
+subscription_id_str: "2"
+encoding_path: "analytics:dcnminitITL"
+collection_id: 62550
+msg_timestamp: 1614224486518
+data_gpbkv {
+  fields {
+    name: "keys"
+    fields {
+      name: "analytics:dcnminitITL"
+      string_value: "analytics:dcnminitITL"
+    }
+  }
+  fields {
+    name: "content"
+    fields {
+      fields {
+        name: "control_info"
+        fields {
+          fields {
+            name: "version"
+            string_value: "1.0.0.1"
+          }
+          fields {
+            name: "chunk_sequence"
+            string_value: "1"
+          }
+          fields {
+            name: "total_chunks_count"
+            string_value: "1"
+          }
+        }
+      }
+      fields {
+        name: "values"
+        fields {
+          fields {
+            name: "1"
+            fields {
+              fields {
+                name: "port"
+                string_value: "fc2/15"
+              }
+              fields {
+                name: "vsan"
+                string_value: "100"
+              }
+              fields {
+                name: "app_id"
+                string_value: "255"
+              }
+              fields {
+                name: "sid"
+                string_value: "0x750000"
+              }
+              fields {
+                name: "did"
+                string_value: "0xef0020"
+              }
+              fields {
+                name: "lun"
+                string_value: "0000-0000-0000-0000"
+              }
+              fields {
+                name: "raIO"
+                string_value: "0"
+              }
+              fields {
+                name: "waIO"
+                string_value: "60"
+              }
+              fields {
+                name: "rtIO"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIO"
+                string_value: "54485918039"
+              }
+              fields {
+                name: "tmrtIOc"
+                string_value: "0"
+              }
+              fields {
+                name: "tmwtIOc"
+                string_value: "54485917593"
+              }
+              fields {
+                name: "rtIOt"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOt"
+                string_value: "97549500867153"
+              }
+              fields {
+                name: "rtIOint"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOint"
+                string_value: "45617984577183"
+              }
+              fields {
+                name: "rtIOb"
+                string_value: "0"
+              }
+              fields {
+                name: "wtIOb"
+                string_value: "27896790035968"
+              }
+              fields {
+                name: "tmrtIOb"
+                string_value: "0"
+              }
+              fields {
+                name: "tmwtIOb"
+                string_value: "27896789807616"
+              }
+              fields {
+                name: "rIObw"
+                string_value: "0"
+              }
+              fields {
+                name: "wIObw"
+                string_value: "17215488"
+              }
+              fields {
+                name: "rIOa"
+                string_value: "0"
+              }
+              fields {
+                name: "wIOa"
+                string_value: "0"
+              }
+              fields {
+                name: "rIOf"
+                string_value: "0"
+              }
+              fields {
+                name: "wIOf"
+                string_value: "0"
+              }
+              fields {
+                name: "samStm"
+                string_value: "1614224440"
+              }
+              fields {
+                name: "samEtm"
+                string_value: "1614224470"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+====================================================================================================
+{
+  "nodeIdStr": "BJ-MDS9710",
+  "subscriptionIdStr": "2",
+  "encodingPath": "analytics:dcnminitITL",
+  "collectionId": "62550",
+  "msgTimestamp": "1614224486518",
+  "dataGpbkv": [
+    {
+      "fields": [
+        {
+          "name": "keys",
+          "fields": [
+            {
+              "name": "analytics:dcnminitITL",
+              "stringValue": "analytics:dcnminitITL"
+            }
+          ]
+        },
+        {
+          "name": "content",
+          "fields": [
+            {
+              "fields": [
+                {
+                  "name": "control_info",
+                  "fields": [
+                    {
+                      "fields": [
+                        {
+                          "name": "version",
+                          "stringValue": "1.0.0.1"
+                        },
+                        {
+                          "name": "chunk_sequence",
+                          "stringValue": "1"
+                        },
+                        {
+                          "name": "total_chunks_count",
+                          "stringValue": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "values",
+                  "fields": [
+                    {
+                      "fields": [
+                        {
+                          "name": "1",
+                          "fields": [
+                            {
+                              "fields": [
+                                {
+                                  "name": "port",
+                                  "stringValue": "fc2/15"
+                                },
+                                {
+                                  "name": "vsan",
+                                  "stringValue": "100"
+                                },
+                                {
+                                  "name": "app_id",
+                                  "stringValue": "255"
+                                },
+                                {
+                                  "name": "sid",
+                                  "stringValue": "0x750000"
+                                },
+                                {
+                                  "name": "did",
+                                  "stringValue": "0xef0020"
+                                },
+                                {
+                                  "name": "lun",
+                                  "stringValue": "0000-0000-0000-0000"
+                                },
+                                {
+                                  "name": "raIO",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "waIO",
+                                  "stringValue": "60"
+                                },
+                                {
+                                  "name": "rtIO",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIO",
+                                  "stringValue": "54485918039"
+                                },
+                                {
+                                  "name": "tmrtIOc",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "tmwtIOc",
+                                  "stringValue": "54485917593"
+                                },
+                                {
+                                  "name": "rtIOt",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOt",
+                                  "stringValue": "97549500867153"
+                                },
+                                {
+                                  "name": "rtIOint",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOint",
+                                  "stringValue": "45617984577183"
+                                },
+                                {
+                                  "name": "rtIOb",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wtIOb",
+                                  "stringValue": "27896790035968"
+                                },
+                                {
+                                  "name": "tmrtIOb",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "tmwtIOb",
+                                  "stringValue": "27896789807616"
+                                },
+                                {
+                                  "name": "rIObw",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIObw",
+                                  "stringValue": "17215488"
+                                },
+                                {
+                                  "name": "rIOa",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIOa",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "rIOf",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "wIOf",
+                                  "stringValue": "0"
+                                },
+                                {
+                                  "name": "samStm",
+                                  "stringValue": "1614224440"
+                                },
+                                {
+                                  "name": "samEtm",
+                                  "stringValue": "1614224470"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
