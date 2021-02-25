@@ -1,4 +1,12 @@
 
+Query Name      :dcnminitITL
+Query String    :select port, vsan, app_id, initiator_id, target_id, lun, active_io_read_count, active_io_write_count, total_read_io_count, total_write_io_count, total_time_metric_based_read_io_count, total_t
+ime_metric_based_write_io_count,total_read_io_time, total_write_io_time, total_read_io_initiation_time, total_write_io_initiation_time,total_read_io_bytes, total_write_io_bytes, total_time_metric_based_read_i
+o_bytes, total_time_metric_based_write_io_bytes,   read_io_bandwidth, write_io_bandwidth,  read_io_aborts, write_io_aborts,read_io_failures, write_io_failures  from fc-scsi.scsi_initiator_itl_flow
+Query Type      :periodic, interval 30
+Query Options   :differential
+
+
 {"telemetry_node": "10.75.60.4", "telemetry_node_port": "42294"}
 node_id_str: "BJ-MDS9710"
 subscription_id_str: "2"
