@@ -34,7 +34,7 @@
        2.11708868e-03, 3.78100701e-05, 2.75568526e-03, 3.95168870e-03,
        1.70567760e-05, 2.11708868e-03, 3.95168870e-03, 2.70757386e-04])/
     Best Epsilon Density :0.0012666326909782852
-    Abnormal Postition : array([ 7,  9, 12, 15])
+    Abnormal Position : array([ 7,  9, 12, 15])
 
 ##### Training data set
 
@@ -60,7 +60,7 @@
              [2,2,3],[3,3,3],[8.1,7.8,9],[1,2,3],[3,3,3],[1,0,1]]
                                  #12                        #15
                                  
-    Abnormal Postition : array([ 7,  9, 12, 15])
+    Abnormal Position : array([ 7,  9, 12, 15])
                                                                                             
 ![N|Solid](abnormal_data_set.png)
 
