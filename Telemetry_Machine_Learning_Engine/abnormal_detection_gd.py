@@ -147,7 +147,7 @@ def main():
     # input data set to get abnormal , to calculate possibility p(X)
     # input data 3D sample , kind of [bandwidth , latency , pps] etc ,multi variable is enable ,  may comes from telemetry data source
     X_list = [[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[1,3,3],[8,8,8],[1,2,3],[9,7,8],[2,2,3],[3,3,3],[8.1,7.8,9],[1,2,3],[3,3,3],[1,0,1]]
-    #X_list = [ [8, 8, 8], [1, 2, 3],[8.1, 7.8, 9], [1, 2, 3], [3, 3, 3], [1, 0, 1]]
+    #X_list = [ [8, 8, 8], [8.1, 7.8, 9], [1, 2, 3], [3, 3, 3], [1, 0, 1]] # less input data set
     # marked training data set with marked y value , to calculate p(Xval) and compare with Yval to select best epsilon
     # Yval 0 means normal , 1 means abnormal
     Xval_list = [[1,1,1],[2,2,3],[7,7,7],[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[6,6,6],[0,0,0]]
