@@ -27,13 +27,16 @@
     
     Output sample:
     
-    Mean value : array([1.30296349, 1.42169701, 1.58981761]) # after convert to gaussian distribute data set
-    Variance : array([0.30074233, 0.27008326, 0.15935424])   # after convert to gaussian distribute data set
-    Possible Density value array([0.21768332, 0.51882173, 0.54973851, 0.24887983, 0.32599314,
-       0.45614046, 0.26347663, 0.01523976, 0.21768332, 0.01494961,
-       0.37686139, 0.48332204, 0.01015546, 0.21768332, 0.48332204,
-       0.00057216])/
-    Best Epsilon Density :0.11379609604031615
+    Training Mean value : array([1.21024119, 1.33255686, 1.43944795])
+    Training Variance : array([0.33484255, 0.33258626, 0.34017886])
+    Training possible density value : array([5.21959803e-02, 2.93687874e-01, 2.49966588e-02, 2.00708430e-01,
+       3.05556827e-01, 2.97216407e-01, 1.28454266e-01, 1.56045536e-01,
+       3.17492991e-01, 5.66458355e-02, 1.20683625e-04])
+    Input data Possible Density value array([0.20070843, 0.30555683, 0.29721641, 0.12845427, 0.15604554,
+       0.31749299, 0.21697702, 0.01064339, 0.20070843, 0.0102079 ,
+       0.29368787, 0.30882676, 0.00848956, 0.20070843, 0.30882676,
+       0.0066866 ])/
+    Best Epsilon Density :0.05693032657265138
     Abnormal Position : array([ 7,  9, 12, 15])
 
 ##### Training data set

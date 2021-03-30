@@ -167,14 +167,16 @@ def main():
     display_3d_data(X, 'bx')  # display input data set after convert to gaussian distribute data set
 
     mu,sigma2 = estimate_gaussian(Xval)
-    print("Mean value : %a"%mu) # mean value of each parameter , mean bandwidth , mean latency , mean pps etc
-    print("Variance : %a"%sigma2) # variance of each parameter
+    print("Training Mean value : %a"%mu) # mean value of each parameter , mean bandwidth , mean latency , mean pps etc
+    print("Training Variance : %a"%sigma2) # variance of each parameter
+
+    # mu, sigma2 = estimate_gaussian(Xval)
+    pval = multivariateGaussian(Xval, mu, sigma2)  # get Xval training data set possibility pval(Xval), density value
+    print("Training possible density value : %a" % pval)
 
     p = multivariateGaussian(X,mu,sigma2) # get input data set possibility p(X), density value
-    print("Possible Density value %a/"%p)
+    print("Input data Possible Density value %a/"%p)
 
-    #mu, sigma2 = estimate_gaussian(Xval)
-    pval = multivariateGaussian(Xval,mu,sigma2) # get Xval training data set possibility pval(Xval), density value
 
     best_epsilon = select_best_epsilon(Yval,pval) # with marked abnormal Yval , compare with pval ,choose the best epsilon density for training data collection
     print("Best Epsilon Density :%a"%best_epsilon)
