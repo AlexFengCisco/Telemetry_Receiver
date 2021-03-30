@@ -186,9 +186,10 @@
     
                     
      
-### Will consolidate UDP/TCP Json and GPB in one py file soon
+### Telemetry Machine Learning Engine
 
-    Base on Binary code , 1-4 bytes indicate mesage type ...
+    Sample telemetry machine learning engine code , 
+    LSTM prediction and Multivariate Gaussian Distribution Abnormal Detection.
     
 ### Telemetry + prometheus lab log
 ### Telemetry + InfluxDB lab log

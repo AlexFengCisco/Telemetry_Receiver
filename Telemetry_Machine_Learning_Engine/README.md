@@ -24,6 +24,17 @@
     Compare input data set density value p(x) with training data set density value  best_epsilon(x_training),
     if p(x_input) < best_epsilon(x_training), means data seems far away from gaussian distribution center , 
     and got the abnormal from input data set
+    
+    Output sample:
+    
+    Mean value : array([3.31875, 3.675  , 4.3125 ])
+    Variance : array([6.89902344, 4.859375  , 4.83984375])
+    Density value array([2.11708868e-03, 4.15097858e-03, 4.67402379e-03, 2.99782299e-03,
+       3.83145840e-03, 3.50947618e-03, 2.69619770e-03, 3.64685154e-05,
+       2.11708868e-03, 3.78100701e-05, 2.75568526e-03, 3.95168870e-03,
+       1.70567760e-05, 2.11708868e-03, 3.95168870e-03, 2.70757386e-04])/
+    Best Epsilon Density :0.0012666326909782852
+    Abnormal Postition : array([ 7,  9, 12, 15])
 
 ##### Training data set
 ![N|Solid](training_data_set.png)

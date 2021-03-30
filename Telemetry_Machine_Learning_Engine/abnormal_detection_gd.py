@@ -176,7 +176,7 @@ def main():
     print("Best Epsilon Density :%a"%best_epsilon)
 
     abnormal = np.where(p<best_epsilon)
-    print("Abnormal Postition : %a"%abnormal)
+    print("Abnormal Position : %a"%abnormal)
 
     display_abnormal_3d_data(X,abnormal,'bx') # display abnormal collection from input data collection
 
