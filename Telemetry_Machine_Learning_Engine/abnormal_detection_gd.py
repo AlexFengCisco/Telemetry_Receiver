@@ -164,6 +164,7 @@ def main():
 
     display_3d_data(Xval1,'bx')  # display training data set
     display_3d_data(X1, 'bx')    # display input data set
+    display_3d_data(X, 'bx')  # display input data set after convert to gaussian distribute data set
 
     mu,sigma2 = estimate_gaussian(X)
     print("Mean value : %a"%mu) # mean value of each parameter , mean bandwidth , mean latency , mean pps etc

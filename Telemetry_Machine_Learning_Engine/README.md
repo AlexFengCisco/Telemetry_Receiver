@@ -53,6 +53,10 @@
     
 ![N|Solid](input_data_set.png)
 
+##### input data set after convert to gaussian distribution with log(x+1)
+
+![N|Solid](input_data_after_gd.png)
+
 ##### abnormal data set
     
     X_list = [[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[1,3,3],[8,8,8],[1,2,3],[9,7,8],
