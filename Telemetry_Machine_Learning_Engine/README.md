@@ -37,11 +37,28 @@
     Abnormal Postition : array([ 7,  9, 12, 15])
 
 ##### Training data set
+
+    Marked training data set with marked y value , to calculate p(Xval) and compare with Yval to select best epsilon
+    Yval 0 means normal , 1 means abnormal
+    
+    Xval_list = [[1,1,1],[2,2,3],[7,7,7],[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[6,6,6],[0,0,0]]
+    Yval_list = [[1],[0],[1],[0],[0],[0,],[0],[0],[0],[1],[1]]
+    
 ![N|Solid](training_data_set.png)
 
 ##### input data set
+
+    X_list = [[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[1,3,3],[8,8,8],[1,2,3],[9,7,8],
+              [2,2,3],[3,3,3],[8.1,7.8,9],[1,2,3],[3,3,3],[1,0,1]]
+    
 ![N|Solid](input_data_set.png)
 
 ##### abnormal data set
+    
+    X_list = [[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[1,3,3],[8,8,8],[1,2,3],[9,7,8],
+                                                                        #7              #9
+             [2,2,3],[3,3,3],[8.1,7.8,9],[1,2,3],[3,3,3],[1,0,1]]
+                                 #12                        #15
+                                                                                            
 ![N|Solid](abnormal_data_set.png)
 
