@@ -16,7 +16,7 @@
 #### Multivariate Gaussian Distribution Abnormal Detection sample code
 
     Abnormal Detection with multivariate gaussian distribution model, 
-    a p(x_input) funtion get the data set x_input's epsilon density value,
+    a possibility p(x_input) function get the data set x_input's possibility epsilon density value,
     small density means far away from distribution center.
 
     A training data set with marked abnormal for a best epsilon density value
@@ -38,7 +38,7 @@
 
 ##### Training data set
 
-    Marked training data set with marked y value , to calculate p(Xval) and compare with Yval to select best epsilon
+    Marked training data set with marked y value , to calculate possibility p(Xval) and compare with Yval to select best epsilon
     Yval 0 means normal , 1 means abnormal
     
     Xval_list = [[1,1,1],[2,2,3],[7,7,7],[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[6,6,6],[0,0,0]]

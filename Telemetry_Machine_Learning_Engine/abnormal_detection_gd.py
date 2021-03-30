@@ -1,6 +1,6 @@
 
 '''
-Abnormal Detection with multivariate gaussian distribution model, a p(x_input) funtion get the data set x_input's epsilon density value,
+Abnormal Detection with multivariate gaussian distribution model, a possibility p(x_input) funtion get the data set x_input's epsilon density value,
 small density means far away from distribution center.
 
 A training data set with marked abnormal for a best epsilon density value
@@ -96,7 +96,7 @@ def estimate_gaussian(X):
 
 def multivariateGaussian(X,mu,Sigma2):
     '''
-    base on mu and sigma2 , input data collection array ,calculate p(x) value ,means density function value
+    base on mu and sigma2 , input data collection array ,calculate possibility p(x) value ,means density function value
     :param X:
     :param mu:
     :param Sigma2:
@@ -144,7 +144,7 @@ def select_best_epsilon(yval,pval):
 
 def main():
 
-    # input data set to get abnormal , to calculate p(X)
+    # input data set to get abnormal , to calculate possibility p(X)
     # input data 3D sample , kind of [bandwidth , latency , pps] etc ,multi variable is enable ,  may comes from telemetry data source
     X_list = [[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[1,3,3],[8,8,8],[1,2,3],[9,7,8],[2,2,3],[3,3,3],[8.1,7.8,9],[1,2,3],[3,3,3],[1,0,1]]
 
@@ -167,10 +167,10 @@ def main():
     print("Mean value : %a"%mu) # mean value of each parameter , mean bandwidth , mean latency , mean pps etc
     print("Variance : %a"%sigma2) # variance of each parameter
 
-    p = multivariateGaussian(X,mu,sigma2) # get input data set p(X), density value
+    p = multivariateGaussian(X,mu,sigma2) # get input data set possibility p(X), density value
     print("Density value %a/"%p)
 
-    pval = multivariateGaussian(Xval,mu,sigma2) # get Xval training data set pval(Xval), density value
+    pval = multivariateGaussian(Xval,mu,sigma2) # get Xval training data set possibility pval(Xval), density value
 
     best_epsilon = select_best_epsilon(Yval,pval) # with marked abnormal Yval , compare with pval ,choose the best epsilon density for training data collection
     print("Best Epsilon Density :%a"%best_epsilon)
