@@ -154,14 +154,16 @@ def main():
     Yval_list = [[1],[0],[1],[0],[0],[0,],[0],[0],[0],[1],[1]]
 
     # numpy list to array
-    X = np.asarray(X_list)
-    Xval = np.asarray(Xval_list)
+    X1 = np.asarray(X_list)
+    X = np.log1p(X1)  # for not so gaussian distribution data set , convert to gaussian distribution data set
+    Xval1 = np.asarray(Xval_list)
+    Xval = np.log1p(Xval1) # for not so gaussian distribution data set , convert to gaussian distribution data set
     Yval = np.asarray(Yval_list)
 
     # display_2d_data(X, 'bx')
 
-    display_3d_data(Xval,'bx')  # display training data set
-    display_3d_data(X, 'bx')    # display input data set
+    display_3d_data(Xval1,'bx')  # display training data set
+    display_3d_data(X1, 'bx')    # display input data set
 
     mu,sigma2 = estimate_gaussian(X)
     print("Mean value : %a"%mu) # mean value of each parameter , mean bandwidth , mean latency , mean pps etc
@@ -178,7 +180,7 @@ def main():
     abnormal = np.where(p<best_epsilon)
     print("Abnormal Position : %a"%abnormal)
 
-    display_abnormal_3d_data(X,abnormal,'bx') # display abnormal collection from input data collection
+    display_abnormal_3d_data(X1,abnormal,'bx') # display abnormal collection from input data collection
 
 
 
