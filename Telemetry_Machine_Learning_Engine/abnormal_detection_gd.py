@@ -147,7 +147,7 @@ def main():
     # input data set to get abnormal , to calculate possibility p(X)
     # input data 3D sample , kind of [bandwidth , latency , pps] etc ,multi variable is enable ,  may comes from telemetry data source
     X_list = [[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[1,3,3],[8,8,8],[1,2,3],[9,7,8],[2,2,3],[3,3,3],[8.1,7.8,9],[1,2,3],[3,3,3],[1,0,1]]
-
+    #X_list = [ [8, 8, 8], [1, 2, 3],[8.1, 7.8, 9], [1, 2, 3], [3, 3, 3], [1, 0, 1]]
     # marked training data set with marked y value , to calculate p(Xval) and compare with Yval to select best epsilon
     # Yval 0 means normal , 1 means abnormal
     Xval_list = [[1,1,1],[2,2,3],[7,7,7],[1,2,3],[2,3,4],[3,3,4],[4,5,6],[4,5,5],[2,3,3],[6,6,6],[0,0,0]]
@@ -166,13 +166,14 @@ def main():
     display_3d_data(X1, 'bx')    # display input data set
     display_3d_data(X, 'bx')  # display input data set after convert to gaussian distribute data set
 
-    mu,sigma2 = estimate_gaussian(X)
+    mu,sigma2 = estimate_gaussian(Xval)
     print("Mean value : %a"%mu) # mean value of each parameter , mean bandwidth , mean latency , mean pps etc
     print("Variance : %a"%sigma2) # variance of each parameter
 
     p = multivariateGaussian(X,mu,sigma2) # get input data set possibility p(X), density value
     print("Possible Density value %a/"%p)
 
+    #mu, sigma2 = estimate_gaussian(Xval)
     pval = multivariateGaussian(Xval,mu,sigma2) # get Xval training data set possibility pval(Xval), density value
 
     best_epsilon = select_best_epsilon(Yval,pval) # with marked abnormal Yval , compare with pval ,choose the best epsilon density for training data collection
