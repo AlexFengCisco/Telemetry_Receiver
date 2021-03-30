@@ -27,8 +27,8 @@
     
     Output sample:
     
-    Mean value : array([1.30296349, 1.42169701, 1.58981761])
-    Variance : array([0.30074233, 0.27008326, 0.15935424])
+    Mean value : array([1.30296349, 1.42169701, 1.58981761]) # after convert to gaussian distribute data set
+    Variance : array([0.30074233, 0.27008326, 0.15935424])   # after convert to gaussian distribute data set
     Possible Density value array([0.21768332, 0.51882173, 0.54973851, 0.24887983, 0.32599314,
        0.45614046, 0.26347663, 0.01523976, 0.21768332, 0.01494961,
        0.37686139, 0.48332204, 0.01015546, 0.21768332, 0.48332204,
