@@ -8,7 +8,7 @@ A training data set with marked abnormal for a best epsilon density value
 compare input data set density value p(x) with training data set density value  best_epsilon(x_training),
 if p(x_input) < best_epsilon(x_training), means data seems far away from gaussian distribution center , and got the abnormal from input data set
 
-For non supervised training , dynamic epsilon maybe needed , may choose (sensibility)% of the possibility of training data set as marked abnormal
+For non supervised training , dynamic best epsilon maybe needed , may choose (sensibility)% of the possibility of training data set as marked abnormal
 '''
 
 import numpy as np
