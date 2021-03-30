@@ -168,7 +168,7 @@ def main():
     print("Variance : %a"%sigma2) # variance of each parameter
 
     p = multivariateGaussian(X,mu,sigma2) # get input data set possibility p(X), density value
-    print("Density value %a/"%p)
+    print("Possible Density value %a/"%p)
 
     pval = multivariateGaussian(Xval,mu,sigma2) # get Xval training data set possibility pval(Xval), density value
 
