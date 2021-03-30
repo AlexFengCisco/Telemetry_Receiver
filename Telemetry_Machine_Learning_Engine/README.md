@@ -59,6 +59,8 @@
                                                                         #7              #9
              [2,2,3],[3,3,3],[8.1,7.8,9],[1,2,3],[3,3,3],[1,0,1]]
                                  #12                        #15
+                                 
+    Abnormal Postition : array([ 7,  9, 12, 15])
                                                                                             
 ![N|Solid](abnormal_data_set.png)
 
