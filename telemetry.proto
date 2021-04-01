@@ -131,8 +131,7 @@ message TelemetryRowGPB {
   // ends in a list element, the keys field is a GPB encoded message that
   // contains the sequence of key values for each such list element in the
   // encoding-path traversed starting from the root.  The set of keys
-  // unambiguously identifies the inst
-  ance of data encoded in the
+  // unambiguously identifies the instance of data encoded in the
   // TelemetryRowGPB message. Corresponding protobuf message definition will
   // be required to decode the byte stream. The encoding_path field in
   // Telemetry message, together with model_version field should be
@@ -154,23 +153,24 @@ bytes content = 11;
   //repeated system_uptime content = 12;
 }
 
-message system_uptime {
-    option (cisco_msg).schema_path = "RootOper.SystemTime.Uptime";
-
+//message system_uptime {
+ //   option (cisco_msg).schema_path = "RootOper.SystemTime.Uptime";
+//
     // Host name
-    optional string hostname = 50 [(cisco_field).name="Hostname"];
-    string
+    //optional string hostname = 50 [(cisco_field).name="Hostname"];
+    //string hostname = 50 [(cisco_field).name="Hostname"];
+    //string
     // Amount of time in seconds since this system     was last initialized
-    optional uint32 uptime = 51 [(cisco_field).name="Uptime"];
-    oneof value_by_type {
-    bytes          hostname = ;
-    string         string_value = 5;
-    bool           bool_value = 6;
-    uint32         uint32_value = 7;
-    uint64         uint64_value = 8;
-    sint32         sint32_value = 9;
-    sint64         sint64_value = 10;
-    double         double_value = 11;
-    float          float_value = 12;
-  }
-}
+    //optional uint32 uptime = 51 [(cisco_field).name="Uptime"];
+    //oneof value_by_type {
+    //bytes          hostname = ;
+    //string         string_value = 5;
+    //bool           bool_value = 6;
+    //uint32         uint32_value = 7;
+    //uint64         uint64_value = 8;
+    //sint32         sint32_value = 9;
+    //sint64         sint64_value = 10;
+    //double         double_value = 11;
+    //float          float_value = 12;
+  //}
+//}
