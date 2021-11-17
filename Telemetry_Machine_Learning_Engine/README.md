@@ -74,14 +74,15 @@
 #### Affinity Propagation Cluster
 
     Non supvervised learning , auto clustering training data sets, and labeld with cluster ID.
-    labels means cluster IDs , use affinity propagration to cluster all datas in a EU space with instance to center
-    labels count is unpredictable , should be based on data set samples.
-    Note, EU space is multi dimention space , in this case, 100X100 3D
+    Use affinity propagration to clustering dataset in an EU space with instance to center
+    labels count is unpredictable , should based on data set samples.
+    Note, EU space is multi dimension space , in this case, 100X100 3D
 
 
-##### sample dataset
-
-    centers means in 2D how many clusters will be generated, features means 2D
+##### generate sample dataset
+    
+    x, _ = datasets.make_blobs(n_samples=100, centers=2,n_features=2, random_state=10)
+    #centers means in 2D how many clusters will be generated, features means 2D
     
 ![N|Solid](ap_cluster_sample_data.png)
 
