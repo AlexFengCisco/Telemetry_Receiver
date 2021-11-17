@@ -83,8 +83,8 @@
 
     centers means in 2D how many clusters will be generated, features means 2D
     
-![N|Solid](af_cluster_sample_data.png)
+![N|Solid](ap_cluster_sample_data.png)
 
 ##### Labeled test dataset, clustering to find abnormal data or root cause.
 
-![N|Solid](af_cluster_result.png)
+![N|Solid](ap_cluster_result.png)
