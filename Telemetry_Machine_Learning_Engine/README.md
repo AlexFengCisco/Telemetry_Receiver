@@ -86,6 +86,6 @@
     
 ![N|Solid](ap_cluster_sample_data.png)
 
-##### Labeled test dataset, clustering to find abnormal data or root cause.
+##### Labeled sample dataset, clustering to find abnormal data or root cause.
 
 ![N|Solid](ap_cluster_result.png)
