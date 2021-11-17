@@ -191,6 +191,7 @@
     Sample telemetry machine learning engine code , 
     LSTM prediction and Multivariate Gaussian Distribution Abnormal Detection.
     
+    Non supervised learning , Affinity propagation clustering , for root cause detection and abnormal detection
 ### Telemetry + prometheus lab log
 ### Telemetry + InfluxDB lab log
 ### Telemetry + Kafka lab log
