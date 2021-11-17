@@ -71,3 +71,20 @@
                                                                                             
 ![N|Solid](abnormal_data_set.png)
 
+#### Affinity Propagation Cluster
+
+    Non supvervised learning , auto clustering training data sets, and labeld with cluster ID.
+    labels means cluster IDs , use affinity propagration to cluster all datas in a EU space with instance to center
+    labels count is unpredictable , should be based on data set samples.
+    Note, EU space is multi dimention space , in this case, 100X100 3D
+
+
+##### sample dataset
+
+    centers means in 2D how many clusters will be generated, features means 2D
+    
+![N|Solid](af_cluster_sample_data.png)
+
+##### Labeled test dataset, clustering to find abnormal data or root cause.
+
+![N|Solid](af_cluster_result.png)
