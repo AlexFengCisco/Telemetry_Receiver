@@ -74,7 +74,7 @@
 #### Affinity Propagation Cluster
 
     Non supvervised learning , auto clustering training data sets, and labeld with cluster ID.
-    Use affinity propagration to clustering dataset in an EU space with instance to center
+    Use affinity propagration to clustering dataset in an EU space with instance to cluster center
     labels count is unpredictable , should based on data set samples.
     Note, EU space is multi dimension space , in this case, 100X100 3D
 
