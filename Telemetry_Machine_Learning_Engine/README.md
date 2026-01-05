@@ -89,3 +89,11 @@
 ##### Labeled sample dataset, clustering to find abnormal data or root cause.
 
 ![N|Solid](ap_cluster_result.png)
+
+#### Fast Fourier Transform (FFT) for baseline correction and identify abnormal data
+
+	1.	Generating a synthetic dataset: This dataset will include a slow-varying baseline, some distinct peaks (representing anomalies), and random noise.
+	2.	Baseline Correction using FFT: We'll apply the FFT to transform the signal into the frequency domain. By filtering out high-frequency components, we can isolate the low-frequency baseline. An inverse FFT then reconstructs this baseline in the time domain.
+	3.	Anomaly Detection: After subtracting the estimated baseline from the original data, the remaining signal (residuals) will highlight the peaks and anomalies. We'll then use scipy.signal.find_peaks and a statistical threshold to pinpoint these abnormal data points.
+
+![N|Solid](fourier_transform_abnormal.png)
